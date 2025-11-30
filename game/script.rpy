@@ -34,6 +34,9 @@ image bg candi_gerbang = "candi_gerbang.png"
 image bg dalam_bus = "dalam_bus.png"
 image bg kuil = "kuil.png"
 image bg cafe = "cafe.png"
+image bg koridor_sekolah = "lorong.png"
+image bg ruang_makan = "ruang_makan.png"  
+image bg candi_reruntuhan = "candi_reruntuhan.png" 
 
 
 # ===== CHARACTER SPRITES - CARISSA =====
@@ -43,6 +46,9 @@ image carissa takut = "carissa_takut.png"
 image carissa kaget = "carissa_kaget.png"
 image carissa bingung = "carissa_bingung.png"
 image carissa senyum = "carissa_senyum.png"
+image carissa corrupted = "carissa_corrupted.png"  
+image carissa marah = "carissa_marah.png"  
+image carissa khawatir = "carissa_khawatir.png"  
 
 # ===== CHARACTER SPRITES - AKSARA =====
 image aksara normal = "aksara_normal.png"
@@ -51,6 +57,7 @@ image aksara khawatir = "aksara_khawatir.png"
 image aksara sedih = "aksara_sedih.png"
 image aksara marah = "aksara_marah.png"
 image aksara senyum = "aksara_senyum.png"
+image aksara kaget = "aksara_kaget.png"
 image aksara guardian = "aksara_guardian.png"  # Mode penjaga
 
 # ===== CHARACTER SPRITES - DEWA =====
@@ -66,10 +73,12 @@ image dewa wujud_asli = "dewa_wujud_asli.png"  # Wujud roh
 image nenek normal = "nenek_normal.png"
 image nenek khawatir = "nenek_khawatir.png"
 image nenek senyum = "nenek_senyum.png"
+image nenek serius = "nenek_serius.png"
 
 image kakek normal = "kakek_normal.png"
 image kakek khawatir = "kakek_khawatir.png"
 image kakek senyum = "kakek_senyum.png"
+image kakek serius = "kakek_serius.png"
 
 
 # ===== NPC SPRITES =====
@@ -117,6 +126,12 @@ define audio.phone_vibrate = "audio/phone_vibrate.ogg"
 define audio.bus_engine = "audio/bus_engine.ogg"
 define audio.bus_stop = "audio/bus_stop.ogg"
 define audio.thing_open = "audio/thing_open.ogg"
+define audio.flame_flicker = "audio/flame_flicker.ogg"
+define audio.alarm_clock = "audio/alarm_clock.ogg"  
+define audio.dark_power = "audio/dark_power.ogg"  
+define audio.holy_power = "audio/holy_power.ogg" 
+define audio.light_explosion = "audio/light_explosion.ogg"  
+define audio.sfx_combat = "audio/sfx_combat.ogg" 
 # ================================================
 # CHAPTER 1 - AWAL TAKDIR
 # ================================================
@@ -215,12 +230,13 @@ label scene1_rumah_tua:
     
     c "(berbisik, hampir menangis) Ibu... Nenek..."
     
-    n "Carissa menutup matanya erat, berharap semua ini hanya ilusi."
-    
-    show lilin at left
-    with dissolve
-    
-    n "Namun lilin di altar kecil neneknya tiba-tiba bergoyang tampa angin."
+    show carissa sedih
+    c "(memejamkan mata kuat-kuat) Ini cuma mimpi... mimpi..."
+    pause 1.0
+    play sound audio.flame_flicker
+    show lilin at left with dissolve
+
+    c "(membuka mata) ...?!"."
     
     play music audio.tension
     
@@ -248,7 +264,7 @@ label scene1_rumah_tua:
     n "Sepanjang malam, Carissa menatap langit-langit kamarnya tanpa tidur."
     n "Setiap kali memejamkan mata, suara dari cermin itu terpantul kembali di pikirannya."
     
-    pause 2.0
+    pause 1.0
     
     jump scene2_sekolah_pagi
 
@@ -305,21 +321,21 @@ label scene2_sekolah_pagi:
     
     show carissa bingung
     
-    c "Ih, sok tau! Maksudnya ganggu gimana?"
+    c "Ih, sok tau!"
     
     show aksara khawatir
     
-    a "(pelan tapi tegas) Aura kamu... beda. Nggak kayak biasanya."
-    
-    n "Carissa tertawa kecil, namun nada suaranya terdengar goyah. Matanya sesaat melirik sekeliling, seolah ada sesuatu yang mengawasinya."
-    
-    show carissa normal
-    
-    c "Aura? Kamu ngomong apaan sih!? Jangan mulai hal aneh lagi deh, Aksara."
+    a "(menatap Carissa lama) ...Kamu beneran tidur nyenyak kan tadi malam?"
+
+    c "Hah? emangnya napa?"
+
+    a "Matamu... ada yang beda."
+
+    c "Jangan mulai hal aneh lagi deh, Aksara."
     
     show aksara serius
     
-    a "Kamu tau kan aku tinggal di kuil. Aku bisa ngerasain kalau ada roh yang ngikutin seseorang—bisa ganggu keseimbangan energi orang itu."
+    a "Kamu tau kan aku tinggal di kuil. Aku bisa ngerasain kalau ada roh yang ngikutin seseorang."
     
     n "Senyum Carissa perlahan memudar, menatap Aksara dengan ekspresi campur aduk antara takut dan bingung."
     
@@ -335,15 +351,10 @@ label scene2_sekolah_pagi:
     c "Kebuka? Maksudnya?"
     
     a "(mengalihkan pandangan) Susah buat dijelasin. Tapi intinya... jangan anggep ini enteng."
-    a "Kalau kamu terus ngeliat mereka tanpa perlindungan, mereka mungkin bakal nyerang kamu."
-    
+
     show carissa sedih
     
-    c "(menggenggam tas) Aksara..."
-    
-    show aksara khawatir
-    
-    a "Carissa, kamu harus percaya sama aku—"
+    c "(menggenggam tas) ..."
     
     play sound audio.school_bell
     
@@ -352,14 +363,15 @@ label scene2_sekolah_pagi:
     
     show carissa normal
     
-    c "(memotong) Nanti aja ya. Aku... takut dengerinnya."
-    
+    c "Ehhh, sampai jumpa Aks-."
+
+    a "(menggenggam tangan Carissa) Tunggu dulu."
+
     n "Aksara menatapnya lama, seperti menimbang sesuatu yang ia tahu namun enggan diucapkan."
     n "Akhirnya ia menunduk dengan pasrah."
     
-    show aksara serius
-    
-    a "(menghela napas) Oke. Tapi ingat satu hal—"
+
+    a "(menghela napas) Tapi ingat satu hal—"
     a "Jangan percaya siapa pun yang bilang tau soal kamu... kecuali aku."
     a "Oh iya, jangan lupa selalu bawa jimat ini kemana-mana."
     
@@ -462,11 +474,15 @@ label scene3_kelas:
     
     n "Guru mempersilakan Dewa duduk."
     n "Ia berjalan melewati bangku Carissa."
-    n "Namun Carissa justru merasakan hawa dingin yang aneh terpancar dari pemuda pirang itu."
-    
-    show carissa takut
-    
-    c "(dalam hati) Dinginnyeee~"
+    play sound audio.heartbeat
+    with hpunch
+
+    show carissa normal
+    c "(dalam hati) Kenapa dadaku—"
+
+    play sound audio.wind
+    show carissa bingung
+    c "(memeluk diri sendiri) Dingin..."
     
     scene black
     with Dissolve(1.0)
@@ -554,17 +570,19 @@ label scene4_perpustakaan:
     n "Carissa ingin menjawab, namun suaranya seperti tersangkut di tenggorokan. Tatapan Dewa terlihat sama seperti sebelumnya."
     
     show dewa misterius
-    
-    d "(berbisik pelan) Tapi hati-hati, Carissa... beberapa hal emang lebih baik nggak diketahui."
-    
-    show carissa kaget
-    with vpunch
-    
-    n "Carissa membeku. Entah kenapa, kalimat itu terdengar seperti lebih dari sekadar saran."
-    
+    d "(mengambil buku dari rak atas yang gak keliatan Carissa) Ini yang kamu cari?"
+    c "Loh, kok kamu tau—"
+    d "(tersenyum) Beruntung aja sih. (menatap cover buku) ...Mitos lokal ya? Tertarik sama cerita rakyat?" 
+    c "Eh... iya sih."
+    d "(membalik-balik halaman)
+    c "Ehhh, kamu udah belum liatnya?"
+
+    show dewa normal
+    d "(menyodorkan buku pada Carissa) Nih, udah."
+
     show dewa senyum
     
-    d "(tersenyum tipis) Udah ah, nanti kamu mimpi buruk gara-gara aku."
+    d "Byeee!!"
     
     hide dewa senyum
     with easeoutleft
@@ -787,14 +805,30 @@ label chapter2_start:
     scene black
     with Dissolve(2.0)
     
-    play music audio.tension fadein 3.0
-    
     centered "{color=#fff}Tiga hari kemudian...{/color}"
     pause 1.5
-    centered "{color=#888}Bayangan semakin mendekat.{/color}"
-    centered "{color=#888}Dan sebuah pilihan akan mengubah segalanya.{/color}"
-    pause 2.0
-    
+
+    # ===== SCENE BARU: Morning Routine =====
+    scene bg kamar_carissa with dissolve
+    play sound audio.alarm_clock
+
+    show carissa normal at center with dissolve
+    c "(menguap) Hmmm... pagi lagi."
+
+    n "Carissa melakukan rutinitas pagi seperti biasa."
+    n "Gosok gigi, mandi, sarapan bersama Nenek..."
+
+    scene bg ruang_makan with dissolve
+    show nenek senyum at left
+    show carissa normal at right with dissolve
+
+    nenek "Sarapan dulu, Nduk. Nenek buatin nasi goreng kesukaan kamu."
+    c "(tersenyum) Wah, makasih Nek!"
+
+    n "Semuanya terasa normal."
+    n "Terlalu normal."
+    n "Seperti ketenangan sebelum badai..."
+
     jump scene1_mimpi_buruk
 
 # ===== SCENE 1: Mimpi Buruk & Minigame 1 =====
@@ -804,7 +838,7 @@ label scene1_mimpi_buruk:
     
     play music audio.heartbeat fadein 2.0
     
-    n "Malam itu, Carissa terlelap dalam tidur yang gelisah."
+    n "Sekarang malam hari, Carissa terlelap dalam tidur yang gelisah."
     n "Namun tidurnya bukanlah tidur yang menenangkan."
     
     centered "{color=#8b0000}Dunia Mimpi{/color}"
@@ -1038,15 +1072,15 @@ label scene3_praktik_lapangan:
     show dewa misterius
     
     d "Haha, bukan gitu maksudku..."
-    d "Aura yang kamu miiki... nggak seperti milik orang lain."
+    d "Ada sesuatu yang kamu miiki... yang nggak ada di orang lain."
     
     show carissa takut
     
-    c "(menegang) K-Kenapa bisa kamu tau hal kayak gitu?"
+    c "(menegang) M-maksudnya?"
     
     show dewa senyum
     
-    d "(tertawa kecil) Hahaha, emang ga boleh ya?"
+    d "(tertawa kecil) Hahaha, kenapa? Emang ga boleh ya aku bilang gitu?"
     
     n "Dewa berjongkok, mengambil sampel tanah dengan tenang."
     n "Carissa memperhatikan dalam diam. Gerakannya anggun namun... terasa janggal."
@@ -1242,7 +1276,7 @@ label scene4_kantin_siang:
     
     show aksara serius
     
-    a "(dingin) Aku cuma mau melindungi teman aku."
+    a "(dingin) Aku cuma mau melindungi temanku."
     
     show dewa misterius
     
@@ -1286,7 +1320,13 @@ label defend_aksara_scene4:
     with move
     
     a "(menghela napas lega) Makasih, Carissa."
-    a "Aku cuma nggak mau kamu kenapa-kenapa."
+
+    scene bg koridor_sekolah 
+    with dissolve
+    show dewa misterius at center with dissolve
+    d "(menatap dari jauh) ...Menarik."
+    d "Semakin kau melindunginya... semakin besar kekuatannya nanti."
+    hide dewa with dissolve
     
     jump after_kantin_choice
 
@@ -2306,7 +2346,7 @@ label scene8_outing_class:
     show dewa misterius at right
     with easeinright
     
-    d "(berbisik) Sebentar lagi kamu jadi milikku."
+    d "(tersenyum sambil menatap kalung Carissa) Warnanya cantik... seperti bulan di malam kelahiranmu."
     
     show aksara serius
     with hpunch
@@ -2773,51 +2813,38 @@ label good_ending_chapter2:
     c "Iya, aku oke kok. Makasih ya, Aksara."
     c "Kalau nggak ada kamu... aku nggak tau bakal gimana."
     
-    show aksara senyum
-    
-    a "Untuk itu aku ada."
-    a "(serius) Tapi mulai sekarang, kamu harus lebih waspada."
-    a "Mereka udah tau siapa kamu. Dan mereka nggak akan berhenti."
-    
-    show carissa bingung
-    
-    c "Mereka itu... siapa sebenernya?"
-    
-    show aksara khawatir
-    
-    a "Roh-roh yang terjebak di dunia ini."
-    a "Mereka nyari jalan untuk bisa bebas..."
-    
-    show carissa takut
-    
-    c "Gitu ya..."
-    
-    show aksara normal
-    
-    a "Yang penting, kamu sekarang udah tau kamu nggak sendirian."
-    
-    show carissa senyum
-    
-    c "(mengangguk) Iya. Aku punya kamu."
-    
-    n "Mereka tersenyum satu sama lain."
+    play sound audio.phone_vibrate
 
-    scene bg langit_jingga
-    with slow_dissolve
+    show carissa bingung
+    c "(lihat HP) ...?"
+
+    n "Ada pesan dari nomor tidak dikenal."
+
+    centered "{color=#8b0000}'Kamu lolos... untuk sekarang.'{/color}"
+    pause 1.0
+    centered "{color=#8b0000}'Tapi lain kali... kamu tidak akan seberuntung ini.'{/color}"
+    pause 1.0
+
+    show carissa takut with vpunch
+    c "A-Aksara..."
+
+    show aksara serius
+    a "Ada apa?"
+
+    c "(menunjukkan HP) Ini..."
+
+    show aksara kaget with vpunch
+    a "Dari siapa itu?"
     
-    n "Matahari sore menyinari mereka dengan hangat."
-    n "Meski bahaya telah berlalu, perjalanan baru saja dimulai."
-    n "Namun kali ini, Carissa tahu ia memiliki seseorang yang bisa ia percaya."
-    
-    centered "{color=#0f0}★ GOOD ENDING - KEPERCAYAAN YANG KUAT ★{/color}"
-    pause 2.0
-    
-    centered "{color=#fff}Chapter 2 - SELESAI{/color}"
-    pause 2.0
-    
-    centered "{color=#888}Kepercayaanmu pada Aksara telah membuka jalan yang lebih aman...{/color}"
-    pause 2.0
-    
+    c "A-aku gatau."
+
+    n "Keduanya pun hanya bisa terdiam lama mengetahui hal ini."
+    n "Siapa yang sedang mengancam mereka?"
+
+scene black with Dissolve(2.0)
+
+centered "{color=#0f0}★ GOOD ENDING - KEPERCAYAAN YANG KUAT ★{/color}"
+centered "{color=#fff}Tapi... benarkah ini berakhir?{/color}"
 
 # ===== BAD ENDING CHAPTER 2 =====
 label bad_ending_chapter2:
@@ -2982,6 +3009,7 @@ label neutral_ending_chapter2:
 # CHAPTER 3 - GERBANG YANG TERBUKA
 # ================================================
 
+# SCENE 1 - CHAPTER 3
 label chapter3_start:
     scene black
     with Dissolve(2.0)
@@ -3133,6 +3161,7 @@ label chapter3_scene1_neutral_start:
 
     jump chapter3_scene2
 
+# SCENE 2 - CHAPTER 3
 label chapter3_scene2:
     scene bg kamar_carissa
     with dissolve
@@ -3715,6 +3744,7 @@ label aksara_arrives:
     
     jump chapter3_scene3  
 
+# SCENE 3 - CHAPTER 3
 label chapter3_scene3:
     scene bg ruang_tamu_terang
     with dissolve
@@ -4285,6 +4315,7 @@ label scene3_common_part:
 
     jump label chapter3_scene4
 
+# SCENE 4 - CHAPTER 3
 label chapter3_scene4:
     scene black
     with Dissolve(1.0)
@@ -4796,7 +4827,7 @@ label scene4_rest_good:
     
     show carissa normal
     
-    c "(menggenggam tangan Aksara) Aku janji nggak sembarangan kemana-mana."
+    c "(menggenggam tangan Aksara) Aku janji nggak akan kemana-mana."
     
     show aksara senyum
     
@@ -5018,7 +5049,7 @@ scene black
     
     jump chapter3_scene5
 
-
+# SCENE 5 - CHAPTER 3
 label chapter3_scene5:
     scene black
     with Dissolve(1.0)
@@ -5390,7 +5421,7 @@ label scene5_preparation:
     
     centered "{color=#fff}Hari Terakhir{/color}"
     pause 1.5
-    centered "{color=#888}Apakah mereka berdua akan selamat atau justru tidak...?{/color}"
+    centered "{color=#888}Apakah semuanya berjalan dengan baik atau berakhir dengan buruk?{/color}"
     pause 2.0
     
     jump chapter3_scene6
@@ -5530,7 +5561,7 @@ label scene6_dewa_appears:
     
     play music audio.heartbeat fadein 2.0
     
-    n "Gerbang batu di depan mereka mulai bergetar hebat."
+    n "Salah satu candi batu di depan mereka mulai bergetar hebat."
     n "Retakan-retakan bercahaya merah muncul di permukaannya."
     
     show carissa kaget
@@ -5541,16 +5572,15 @@ label scene6_dewa_appears:
     show dewa wujud_asli at center
     with flash_red
     
-    show aura_merah at center
-    with dissolve
     
     play sound audio.magic
     
     n "Sosok tinggi besar muncul dari balik gerbang."
     n "Aura merah gelap menyelimutinya."
     n "Ini bukan lagi Dewa yang ramah di sekolah."
-    n "Ini... wujud aslinya."
-    
+
+    show dewa wujud_asli at center 
+    with dissolve
     d "(suara bergema) Carissa... akhirnya kau datang."
     
     show aksara guardian at left
@@ -5560,7 +5590,7 @@ label scene6_dewa_appears:
     
     a "(berteriak) JANGAN DEKATI DIA!"
     
-    d "(tertawa pelan) Penjaga Nirantara... tetap setia seperti biasa."
+    d "(tertawa) Nirantara... tetap setia seperti biasa."
     d "(menatap Carissa) Tapi aku tidak datang untuk bertarung."
     d "Aku datang... untuk memberikan pilihan, yah anggap saja sebagai kompromi."
     
@@ -5568,170 +5598,259 @@ label scene6_dewa_appears:
     
     c "Pilihan...?"
     
-    d "Pilihan yang akan menentukan nasib dua dunia."
-    d "Kamu secara sukarela mau memberikannya atau tidak."
-    d "Kalau tidak mau, maka aku terpaksa ."
+    d "Pilihan yang akan menentukan nasib dua dunia ini."
+    d "Tergantung kamu secara sukarela mau memberikannya atau tidak."
+    d "Kalau tidak mau, maka... yah aku terpaksa sih harus mengambilnya secara paksa."
+    d "Senang udah mengenalmu, Carissa."
     
-
+    a "(berteriak) CUKUP OMONG KOSONGMU!"
     
-    show dewa sedih
-    
-    d "Iya. Dan aku memilih... membuka gerbang."
-    d "Karena aku percaya... dunia yang menyatu adalah dunia yang lebih baik."
-    
-    show aksara serius
-    
-    a "Tapi kamu jadi terjebak! Nggak hidup, nggak mati!"
-    
-    show dewa misterius
-    
-    d "Itu konsekuensi yang aku terima."
-    d "(menatap Carissa) Tapi kamu... kamu bisa berbeda."
-    
-    show carissa bingung
-    
-    c "Berbeda gimana?"
-    
-    show dewa normal
-    
-    d "Karena kau lebih kuat dari aku dulu."
-    d "Darah Raktamu... murni. Sempurna."
-    d "Kau bisa membuka gerbang tanpa harus berkorban."
-    
-    show aksara kaget
-    with vpunch
-    
-    a "Itu bohong!"
-    
-    show dewa serius
-    
-    d "(mengabaikan Aksara) Carissa, lihat di sekelilingmu."
-    d "Manusia takut pada roh. Roh dendam pada manusia."
-    d "Tapi bayangkan... dunia tanpa sekat."
-    d "Dunia di mana kedua ras bisa saling memahami."
-    d "Bukankah itu indah?"
-    
-    # PILIHAN MULAI MUNCUL - Dewa memanipulasi
-    show carissa sedih
-    
-    c "(ragu) Tapi... kata Aksara dan Nenek—"
-    
-    show dewa misterius
-    
-    d "Mereka takut kehilangan kekuasaan."
-    d "Nirantara selama ini jadi 'penjaga'. Mereka punya status karena itu."
-    d "Kalau gerbang terbuka... mereka tidak relevan lagi."
-    
-    show aksara marah
-    with vpunch
-    
-    a "ITU NGGAK BENAR!"
-    a "(menatap Carissa) Carissa, jangan dengerin dia!"
-    
-    # CRITICAL CHOICE POINT - First indication
-    menu:
-        "Apa yang Carissa rasakan?"
-        
-        "Aku percaya Aksara":
-            $ aksara_points += 3
-            
-            show carissa normal
-            
-            c "(menggeleng) Nggak. Aksara nggak kayak itu."
-            c "Dia... tulus peduli sama aku."
-            
-            show dewa sedih
-            
-            d "Naif..."
-            
-        "Aku... bingung":
-            show carissa bingung
-            
-            c "Aku... aku nggak tau harus percaya siapa."
-            
-            show dewa senyum
-            
-            d "Maka biarkan hatimu yang memilih."
-            
-        "Mungkin Dewa ada benarnya":
-            $ dewa_points += 2
-            
-            show carissa sedih
-            
-            c "Mungkin... memang ada yang disembunyiin dari aku?"
-            
-            show aksara sedih
-            
-            a "(terluka) Carissa..."
-            
-            show dewa senyum
-            
-            d "(tersenyum) Lihat? Kau mulai paham."
-    
-    # GERBANG MULAI TERBUKA LEBIH LEBAR
     play sound audio.magic
-    with hpunch
     
-    n "Gerbang bergetar lebih hebat."
-    n "Cahaya merah menyembur dari retakan."
+    show aura_biru at left
+    with flash_blue
     
-    show dewa serius
+    n "Aksara meluncurkan serangan energi biru ke arah Dewa!"
     
-    d "Waktunya hampir tiba, Carissa."
-    d "Kau harus memilih SEKARANG."
+    d "(menangkis dengan mudah)"
     
-    # PILIHAN TERAKHIR PREPARATION
-    show carissa takut
-    
-    c "Aku harus... memilih?"
-    
-    show dewa normal
-    
-    d "Iya. Tiga pilihan."
-    
-    # DEWA MENJELASKAN 3 PILIHAN
-    show dewa serius
-    
-    d "PERTAMA: Bantu aku buka gerbang sepenuhnya."
-    d "Dunia baru akan tercipta. Manusia dan roh menyatu."
-    
-    show dewa normal
-    
-    d "KEDUA: Tutup gerbang dengan darahmu."
-    d "Dunia kembali seperti dulu. Tapi kau kehilangan kekuatanmu."
-    
-    show dewa misterius
-    
-    d "KETIGA: Tidak pilih apapun."
-    d "Biarkan gerbang tetap setengah terbuka seperti sekarang."
-    d "Tapi itu artinya... aku dan roh lain akan terus mengganggumu selamanya."
-    
-    show aksara serius
-    
-    a "Carissa, dengerin aku—"
-    
-    show dewa marah
+    play sound audio.wind
     with flash_red
     
-    d "(mengangkat tangan) DIAM, PENJAGA!"
+    n "Aksara terpantul akibat tangkisan dari Dewa."
     
-    play sound audio.magic
-    
-    # AKSARA TERDORONG
-    show aksara khawatir at left
+    show  aksara guardian 
     with hpunch
     
-    n "Aksara terdorong oleh kekuatan Dewa."
+    a "Ugh!"
     
     show carissa kaget
     with vpunch
     
     c "AKSARA!"
     
-    show dewa serius
     
-    d "Ini keputusan CARISSA. Bukan kamu."
-    d "(menatap Carissa) Jadi... apa pilihanmu?"
+    d "(menggeleng) Kau terlalu lemah untuk melawanku."
+    d "(menatap Aksara dengan tatapan tajam) Kau pikir dengan kekuatan kecil itu bisa mengalahkanku?"
+    
+    a "(berdiri dengan susah payah) Selama... aku masih hidup..."
+    a "Aku nggak akan membiarkanmu... sentuh dia!"
+    
+    
+    d "(menghela napas) Kesetiaan yang bodoh."
+    d "(mengangkat tangan)"
+    
+    show aura_merah at center
+    with flash_red
+    
+    play sound audio.heartbeat
+    
+    show carissa takut
+    with vpunch
+    
+    c "JANGAN!"
+    
+    show carissa normal at center
+    with move
+    
+    n "Carissa berlari ke depan Aksara, membentangkan tangannya."
+    
+    show kalung_glow at center
+    with flash_blue
+    
+    play sound audio.magic
+    
+    n "Kalung ibunya bersinar terang!"
+    n "Pelindung biru muncul dan menahan serangan Dewa."
+    
+    d "Kau... melindunginya?"
+    
+    show carissa serius
+    
+    c "(gemetar) Dia... temanku."
+    c "Aku nggak akan biarkan kamu nyakitin dia!"
+    
+    
+    d "(tersenyum tipis) Menarik..."
+    d "Kau rela berkorban?"
+    
+    show carissa normal
+    
+    c "Bukan berkorban. Tapi melindungi orang yang penting untukku."
+    
+    hide aura_merah
+    with dissolve
+    
+    d "(menurunkan tangan) Baiklah. Aku nggak akan nyerang dia lagi."
+    d "(menatap Carissa) Tapi kamu harus dengerin tawaranku."
+    
+    a "(berbisik ke Carissa) Jangan percaya dia..."
+    
+    show carissa bingung at right
+    with move
+    
+    c "Tawaran apa?"
+
+    d "Aku sudah hidup ribuan tahun, Carissa."
+    d "Selama itu, aku melihat kebodohan yang sama berulang."
+    
+    show carissa normal
+    
+    c "Kebodohan?"
+    
+    d "Manusia takut dan membenci kami."
+    d "Kedua ras selalu hidup dalam kewaspadaan yang tidak perlu."
+    d "(merentangkan tangan) Tapi bayangkan... jika tidak ada perantara lagi."
+    d "Jika manusia dan roh hidup bersama. Tidak ada lagi yang tersembunyi."
+    
+    a "(berteriak) Itu cuma kebohongan! Kamu cuma mau kekuasaan!"
+
+    d "(tersenyum dingin) Kekuasaan?"
+    d "Aku sudah punya kekuasaan, Penjaga."
+    d "Yang aku inginkan... adalah kebebasan."
+    d "Kebebasan untuk keluar dari sangkar ini."
+    
+    show carissa bingung
+    
+    c "Gimana bisa?"
+    
+    d "Candi ini... adalah penjara bagiku."
+    d "Para penjaga berkali-kali mengurungku, termasuk Ibumu juga."
+    d "Aku berada tidak sepenuhnya di dunia roh dan tidak sepenuhnya di dunia manusia."
+    d "(menatap Carissa) Aku lelah."
+    
+    # PILIHAN AWAL - Reaksi Carissa
+    menu:
+        "Bagaimana perasaan Carissa?"
+        
+        "Kasihan sama Dewa":
+            $ dewa_points += 2
+            
+            show carissa sedih
+            
+            c "Kamu... terjebak selama ini?"
+            
+            d "Akhirnya ada yang mengerti."
+            
+            a "Carissa, jangan percaya—"
+
+            jump scene6_three
+            
+        "Curiga sama Dewa":
+            $ aksara_points += 2
+            
+            show carissa serius
+            
+            c "Terus kenapa kamu ganggu aku?"
+            c "Kalau cuma mau bebas, kenapa harus melibatkan aku?"
+                    
+            d "(tersenyum tipis) Karena cuma kamu yang bisa membebaskanku."
+            
+            jump scene6_three
+
+        "Bingung":
+            show carissa bingung
+            
+            c "Aku... nggak ngerti."
+            
+            
+            d "Kamu akan, makanya dengarkan dulu tawaranku."
+
+            jump scene6_three
+
+label scene6_three:
+    
+    d "Aku beri kamu tiga pilihan, Carissa.
+    
+    show carissa takut
+    
+    c "(menelan ludah)"
+    
+    d "PERTAMA: Buka gerbang dengan darah Raktamu."
+    d "Dunia manusia dan roh akan menyatu, tidak ada yang akan jadi penghalang."
+    d "Ribuan roh yang terjebak seperti aku... akan bebas."
+    
+    d "KEDUA: Tutup gerbang selamanya."
+    d "Dunia kembali terpisah. Roh kembali ke dimensi mereka."
+    d "Tapi... kau akan kehilangan semua kekuatanmu."
+    d "Menjadi manusia biasa. Tidak bisa melihat kami lagi."
+    d "Yah, bisa saja kamu memilih yang ini."
+    
+    d "KETIGA: Tidak memilih apapun."
+    d "Biarkan semuanya seperti sekarang. Gerbang setengah terbuka."
+    d "Tapi aku... dan roh lainnya... akan terus mengejarmu."
+    d "Selamanya."
+    
+    # AKSARA MENCOBA MEMBERI TAHU KEBENARAN
+    
+    a "Carissa! Jangan dengerin dia!"
+    a "Kalau gerbang dibuka, bukan cuma 'kebebasan' yang terjadi!"
+    a "Bakalan ada kekacauan abadi juga!"
+    
+    
+    d "(menatap tajam ke Aksara) Diam, Penjaga!"
+    d "Kau hanya takut kehilangan posisimu."
+    d "Tanpa gerbang, Nirantara tidak dibutuhkan lagi."
+    
+    a "ITU NGGAK BENAR!"
+    
+    show carissa sedih
+    
+    c "(menutup telinga) CUKUP!"
+    
+    n "Hening sesaat."
+    n "Hanya suara angin yang berhembus pelan."
+    
+    show carissa normal
+    
+    c "(napas berat) Aku... aku butuh waktu buat mikir."
+    
+    d "Sayangnya, waktu adalah kemewahan yang tidak kita miliki."
+    
+    play sound audio.magic
+    with hpunch
+    
+    n "Gerbang bergetar lebih hebat!"
+    
+    d "Gerbang sudah tidak stabil."
+    d "Dalam beberapa menit, ia akan runtuh perlahan-lahan."
+    d "Dan jika itu terjadi..."
+    d "(menatap Carissa) Tidak ada yang bisa mengendalikannya lagi, kecuali kalo kamu mau."
+    
+    show carissa takut
+    
+    c "Maksudnya?"
+    
+    a "Maksudnya... gerbang akan terbuka secara paksa."
+    a "Dan energinya akan... meledak, hati-hati Carissa."
+
+    
+    d "Jadi, Carissa..."
+    d "Pilih sekarang."
+    d "Atau biarkan takdir memilih."
+    
+    show carissa sedih
+    
+    n "Carissa menatap Aksara."
+    n "Temannya yang selalu ada. Yang selalu melindungi."
+    
+    n "Lalu menatap Dewa."
+    n "Sosok yang mengaku terjebak sehingga menginginkan kebebasan."
+    
+    n "Dan gerbang di belakangnya."
+    n "Yang menunggu keputusannya."
+    
+    c "(dalam hati) Ibu... apa yang harus aku lakukan?"
+    
+    # FLASH MEMORY - Pesan Ibu
+    play sound audio.heartbeat
+    
+    centered "{color=#8b0000}{i}'Percayalah pada seseorang yang kamu yakini.'{/i}{/color}"
+    pause 1.5
+    
+    show carissa normal
+    
+    c "(membuka mata) Aku... sudah tau jawabannya."
     
     jump scene6_final_choice
 
@@ -5743,16 +5862,8 @@ label scene6_final_choice:
     scene bg candi_gerbang
     with dissolve
     
-    show carissa sedih at center
+    show carissa serius at center
     with dissolve
-    
-    n "Carissa berdiri sendirian di tengah."
-    n "Di sebelah kirinya, Aksara yang terluka."
-    n "Di depannya, Dewa yang menunggu jawaban."
-    n "Keputusan terberat dalam hidupnya."
-    
-    # SHOW CURRENT POINTS (optional, for debugging)
-    # "Aksara points: [aksara_points], Dewa points: [dewa_points]"
     
     play music audio.heartbeat fadein 2.0
     
@@ -5760,19 +5871,19 @@ label scene6_final_choice:
     pause 2.0
     
     menu:
-        "Apa yang Carissa pilih?"
+        n "Apa keputusan Carissa?"
         
-        "Percaya Aksara - Tutup gerbang":
+        "Tutup gerbang - Percaya Aksara":
             jump ending_good
         
-        "Percaya Dewa - Buka gerbang":
+        "Buka gerbang - Percaya Dewa":
             jump ending_bad
         
-        "Tolak keduanya - Jalan sendiri":
+        "Cari jalan lain":
             jump ending_neutral
 
 # ================================================
-# GOOD ENDING - Trust Aksara, Close Gate
+# GOOD ENDING - Close Gate
 # ================================================
 
 label ending_good:
@@ -5784,87 +5895,279 @@ label ending_good:
     show carissa serius at center
     with dissolve
     
-    c "(berteriak) AKU PILIH TUTUP GERBANG!"
+    c "(dengan suara tegas) Aku pilih... TUTUP GERBANG."
     
-    show dewa marah at right
+    show dewa wujud_asli at right
     with dissolve
     
-    d "(marah) APA?!"
+    d "Apa?!"
     
-    show aksara senyum at left
+    show aksara guardian at left
     with dissolve
     
-    a "(tersenyum lega) Carissa..."
+    a "(tersenyum lega)"
     
     show carissa normal
     
-    c "(menatap Dewa) Maaf, Dewa. Aku ngerti kamu pengen dunia yang lebih baik."
+    c "(menatap Dewa) Maaf, Dewa."
+    c "Aku paham kamu pengen bebas."
     c "Tapi... aku percaya sama Aksara."
-    c "Percaya sama orang-orang yang udah jaga aku selama ini."
+    
+    d "Jadi kamu membuang kesempatan ini?"
+    
+    show carissa serius
+    
+    c "Bukan membuang. Tapi memilih jalan yang benar."
+    c "Dunia mungkin nggak sempurna, tapi itu bukan alasan untuk memaksa perubahan."
     
     show dewa sedih
     
-    d "Kau... membuang kesempatan ini?"
+    d "(terdiam lama)"
+    d "...Kau mirip ibumu."
     
-    show carissa senyum
+    show carissa kaget
     
-    c "Bukan membuang. Tapi memilih jalan yang lebih aman."
-    c "Dunia emang nggak sempurna. Tapi itu bukan alasan buat maksa perubahan."
+    c "Ibu?"
     
-    show dewa serius
+    show dewa normal
     
-    d "(menghela napas) Baiklah..."
-    d "Kalau itu pilihanmu."
+    d "Wanita yang kuat dan keras kepala."
+    d "(suara berubah gelap) TAPI SAYANGNYA..."
+    d "AKU TIDAK AKAN MEMBIARKANMU MENUTUP GERBANG!"
     
-    # RITUAL PENUTUPAN GERBANG
-    show carissa normal
+    show aura_merah at right
+    with flash_red
     
-    c "(menatap Aksara) Aku... harus gimana?"
+    play sound audio.magic
     
-    show aksara normal
+    n "Aura merah Dewa meledak dan energi gelap memenuhi udara."
     
-    a "(mendekat) Kamu perlu alirkan darahmu ke gerbang."
-    a "(menggenggam tangan Carissa) Aku akan bantu stabilkan energimu."
+    a "(berteriak) CARISSA, MUNDUR!"
+    
+    play sound audio.wind
+    with hpunch
+    
+    n "Dewa meluncurkan bola serangan energi berwarna merah ke arah Carissa."
+    
+    show carissa takut at center
+    with vpunch
+    
+    c "KYAAA!"
+    
+    # AKSARA MELINDUNGI
+    show aksara guardian at center
+    with move
+    with flash_blue
+    
+    play sound audio.magic
+    
+    show aura_biru at center
+    with dissolve
+    
+    n "Aksara melompat ke depan Carissa dan membentuk perisai biru."
+    
+    a "(menahan serangan) UGHHH!"
+    
+    with hpunch
+    
+    n "Benturan kedua energi pun mengguncang di sekitar candi."
+    
+
+    show aksara guardian at left
+    with move
+    with hpunch
+    
+    a "(terpental) Akh!"
+    
+    show carissa kaget
+    
+    c "AKSARA!"
+
+    hide aksara guardian
+    with dissolve
+    
+    show dewa wujud_asli at center
+    with move
+    
+    d "JIKA KAU TIDAK MAU MEMBUKA GERBANG..."
+    d "MAKA AKU AKAN MENGAMBIL DARAHMU DENGAN PAKSA!"
+    
+    show carissa serius at right
+    with move
+    
+    c "(menggenggam kalung) Aku... nggak akan kalah!"
+    
+    show kalung_glow at right
+    with flash_blue
+    
+    play sound audio.magic
+    
+    n "Kalung ibunya bersinar terang, dan mulai membentuk energi biru yang menyelimuti Carissa."
+    
+    show aura_biru at right
+    with dissolve
+    
+    c "(berteriak) INI UNTUK IBU!"
+    
+    play sound audio.magic
+    with flash_blue
+    
+    show dewa wujud_asli at center
+    with flash_red
+
+    d "(menangkis) HAHAHA! LEMAH!"
+    
+    n "Serangan Carissa sukses membuat Dewa sedikit mundur dari tempatnya."
+    
+
+    show aksara guardian at left
+    with dissolve
+    
+    a "(berdiri) Carissa... kita serang dia bersamaan!"
+    
+    show carissa normal at right
+    
+    c "(mengangguk) Oke!"
+    
+    n "Aksara dan Carissa pun mengumpulkan energi mereka dengan fokus."
+    
+    show aura_biru at left
+    show kalung_glow at right
+    with dissolve
+    
+    play sound audio.heartbeat
+    
+    n "Cahaya biru semakin terang!"
+    
+    show dewa wujud_asli at center
+    
+    d "KAU PIKIR ITU CUKUP?!"
+    
+    show aura_merah at center
+    with flash_red
+    
+    n "Dewa juga mengumpulkan kekuatannya."
+    
+    a "(berteriak) SEKARANG!"
+    
+    play sound audio.magic
+    with flash_blue
+    with flash_red
+    
+    with hpunch
+    with vpunch
+    
+    n "Ledakan dahsyat benar-benar mengguncangkan seluruh wilayah candi."
+    
+    scene white
+    with Dissolve(0.3)
+    
+    play sound audio.wind
+    
+    scene bg candi_gerbang
+    with Dissolve(0.5)
+    
+    # HASIL PERTARUNGAN
+    show dewa sedih at center
+    with dissolve
+    
+    n "Asap perlahan menghilang."
+    n "Dewa berlutut, aura merahnya melemah."
+    
+    d "(napas berat) Kalian... kuat."
+    
+    show aksara guardian at left
+    show carissa normal at right
+    with dissolve
+    
+    n "Aksara dan Carissa masih berdiri meski lelah."
+    
+    a "(terengah) Sekarang, Carissa!"
+    a "Tutup gerbangnya sebelum dia pulih!"
+    
+    show carissa serius
+    
+    c "(mengangguk)"
+    
+    hide aura_biru
+    hide kalung_glow
+    with dissolve
+
+    
+    show carissa normal at center
+    with move
+    
+    c "(menatap Aksara) Aku harus gimana?"
+    
+    show aksara normal at left
+    
+    a "Sentuh gerbang. Alirkan darahmu."
+    a "Aku akan bantu menstabilkan energimu."
     
     show carissa sedih
     
-    c "Aku... bakal kehilangan kekuatanku kan?"
+    c "Aku... bakal kehilangan kekuatan kan?"
     
     show aksara khawatir
     
-    a "(mengangguk) Iya. Kamu nggak bisa liat roh lagi."
+    a "(mengangguk)"
     
     show carissa senyum
     
-    c "(tersenyum) Gapapa. Aku udah cukup capek liat mereka."
+    c "Gapapa. Selama semua orang selamat serta aku juga."
     
-    # PROSES RITUAL
+    # PROSES PENUTUPAN
     play sound audio.magic
     
     show kalung_glow at center
     with flash_blue
     
-    n "Carissa menyentuh gerbang dengan tangan kanannya."
-    n "Darah dari luka kecil di telapaknya mengalir."
+    n "Carissa berjalan ke candi batu yang bergetar."
+    n "Menggunakan pecahan batu, ia melukai telapak tangannya."
     
-    show aura_biru at center
+    c "(meringis) Ssssh..."
+    
+    n "Darah merah segar menetes ke permukaan gerbang."
+    
+    show aura_biru at left
     with flash_blue
     
-    n "Aksara menyalurkan energinya, membantu Carissa."
-    n "Cahaya biru dan merah bercampur, membentuk segel baru."
+    n "Aksara meletakkan tangannya di bahu Carissa."
+    n "Menyalurkan energi biru untuk menstabilkan proses."
     
-    show dewa wujud_asli at right
+    a "(berbisik) Fokus, Carissa. Bayangkan gerbang tertutup rapat."
     
-    d "(menatap dengan sedih) Sampai jumpa... Carissa."
+    show carissa normal
     
-    hide dewa wujud_asli
+    c "(menutup mata untuk berkonsentrasi)"
+    
+    n "Cahaya biru dari Aksara dan cahaya merah dari darah Carissa mulai bercampur."
+    n "Membentuk pola segel berbentuk pola candi di permukaan."
+    
+    show dewa sedih at right
+    with dissolve
+    
+    d "(menatap dengan tatapan lelah)"
+    d "Jadi... ini akhirnya... hahah."
+    
+    show carissa normal
+    
+    c "(membuka mata sejenak) Dewa..."
+    
+    show dewa normal
+    
+    d "(tersenyum tipis) Sampaikan salamku... pada ibumu."
+    d "Di kehidupan yang lain."
+    
+    n "Sosok Dewa perlahan memudar seperti asap."
+    
+    hide dewa normal
     with flash_white
     
     play sound audio.wind
     
-    n "Dewa perlahan menghilang, tersedot kembali ke dalam gerbang."
-    
-    # GERBANG TERTUTUP
+    n "Tersedot kembali ke dalam gerbang yang mulai menutup."
+
     play sound audio.magic
     with flash_white
     
@@ -5872,47 +6175,59 @@ label ending_good:
     hide aura_biru
     with dissolve
     
-    n "Gerbang tertutup rapat."
-    n "Retakan-retakan hilang."
-    n "Kegelapan lenyap."
+    n "Segel bersinar terang."
+    n "Retakan-retakan mulai menyatu satu per satu."
+    n "Portal yang ada di candi batu pun tertutup rapat kembali."
     
-    # CARISSA COLLAPSE
     show carissa sedih at center
     
-    n "Carissa merasakan tubuhnya melemah."
-    n "Kekuatannya... hilang."
+    n "Carissa merasakan sesuatu hilang dari dalam dirinya."
+    n "Seperti ada yang dicabut paksa."
     
-    show aksara khawatir at left
+    c "(membuka mata) Aku... aku nggak bisa ngerasain apa-apa lagi."
     
-    a "(menangkap Carissa) Carissa!"
+    n "Kemampuan melihat roh... sudah lenyap."
+    n "Tubuhnya sempoyongan karena kakinya kehilangan tenaga."
+    n "Aksara telah kembali dalam wujud manusianya."
+    
+    show aksara normal at left
+    
+    a "(menangkap) Carissa!"
     
     show carissa senyum
     
-    c "(tersenyum lemah) Aku... gapapa."
-    c "Aku cuma... lelah."
+    c "(tersenyum lemah) Makasih... Aksara."
+    c "Kita... berhasil kan?"
     
     show aksara senyum
     
-    a "(memeluk Carissa) Kamu hebat. Kamu udah selamatin semua orang."
+    a "(tersenyum) Iya. Kita berhasil."
+    a "Kamu hebat."
     
-    # EPILOG - Good Ending
+    show carissa normal
+    
+    c "Aku cuma... ngikutin hatiku."
+    c "(menatap Aksara) Dan percaya sama kamu."
+    
+    show aksara normal
+    
+    a "Aku juga percaya sama kamu. Dari awal."
+    
     scene black
     with Dissolve(2.0)
     
-    centered "{color=#0f0}★ GOOD ENDING ★{/color}"
+    play music audio.mystery_theme fadein 2.0
+    
+    centered "{color=#0f0}GOOD ENDING{/color}"
     pause 1.5
-    centered "{color=#fff}KEPERCAYAAN YANG KUAT{/color}"
+    centered "{color=#fff}KEPERCAYAAN{/color}"
     pause 2.0
     
     scene bg halaman_sekolah
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
-    
     n "Beberapa minggu kemudian..."
-    n "Carissa kembali ke kehidupan normalnya."
-    n "Ia tidak bisa melihat roh lagi."
-    n "Tapi... ia bahagia."
+    n "Kehidupan kembali normal."
     
     show carissa senyum at right
     show aksara senyum at left
@@ -5920,34 +6235,24 @@ label ending_good:
     
     a "Gimana rasanya jadi manusia normal?"
     
-    show carissa normal
+    c "(tertawa) Enak ternyata. Kayak tenang gitu."
+    c "Aku bisa tidur nyenyak tanpa mimpi buruk lagi."
     
-    c "(tertawa) Enak juga. Nggak ada yang nakutin lagi."
+    a "Nggak nyesel kehilangan kekuatan nih?"
     
-    show aksara normal
+    c "(menggeleng) Nggak."
+    c "Aku lebih suka kehidupan yang damai."
+    c "(menatap Aksara) Lagipula... aku punya kamu."
+    a "(tersenyum) Selalu."
     
-    a "Kamu nggak nyesel?"
-    
-    show carissa senyum
-    
-    c "(menggeleng) Nggak. Aku pilih kehidupan yang tenang."
-    c "(menatap Aksara) Dan... punya teman yang selalu ada."
-    
-    show aksara senyum
-    
-    a "(tersenyum) Aku akan selalu ada buat kamu."
-    
-    show nenek senyum at center behind aksara
+    hide carissa senyum at right
+    hide aksara senyum at left
     with dissolve
     
-    nenek "Carissa! Ayo pulang, Nenek masak rendang kesukaan kamu!"
-    
-    show carissa senyum
-    
-    c "(berlari) Aku datang, Nek!"
-    
-    n "Dunia kembali seimbang."
-    n "Dan Carissa... akhirnya bisa hidup tanpa beban."
+    n "Gerbang Roh memang sudah tertutup seperti yang sudah diketahui."
+    n "Tapi... apakah Dewa benar-benar tertahan kali ini?"
+    n "Atau hanya kehilangan sebagian kekuatannya dan telah menhilang?"
+    n "Entahlah, untuk saat ini dunia telah aman."
     
     scene black
     with Dissolve(2.0)
@@ -5955,12 +6260,12 @@ label ending_good:
     centered "{color=#fff}TAMAT{/color}"
     pause 2.0
     centered "{color=#888}Terima kasih telah bermain{/color}"
+    centered "{color=#888}'Veil of Two Fates'{/color}"
     pause 2.0
     
-    return
 
 # ================================================
-# BAD ENDING - Trust Dewa, Open Gate
+# BAD ENDING - Open Gate
 # ================================================
 
 label ending_bad:
@@ -5969,292 +6274,467 @@ label ending_bad:
     scene bg candi_gerbang
     with dissolve
     
-    show carissa serius at center
+    show carissa sedih at center
     with dissolve
     
-    c "(berteriak) AKU... AKU PILIH BUKA GERBANG!"
+    c "(dengan suara ragu) Aku... aku pilih BUKA GERBANG."
     
-    show aksara kaget at left
+    show aksara guardian at left
     with vpunch
     
     a "CARISSA, JANGAN!"
     
-    show dewa senyum at right
-    with dissolve
-    
-    d "(tersenyum lebar) Pilihan yang bijak."
-    
-    show carissa sedih
-    
-    c "(menatap Aksara) Maafin aku, Aksara..."
-    c "Tapi aku percaya... ini jalan yang lebih baik."
-    
-    show aksara sedih
-    
-    a "(menangis) Carissa... kamu nggak tau apa yang kamu lakukan!"
-    
-    show dewa normal
-    
-    d "Tenang, Penjaga. Dunia baru akan indah."
-    d "(menatap Carissa) Sekarang... alirkan darahmu ke gerbang."
-    
-    # RITUAL PEMBUKAAN GERBANG
-    play sound audio.magic
-    
-    show kalung_glow at center
-    with flash_red
-    
-    n "Carissa menyentuh gerbang dengan tangannya."
-    n "Darahnya mengalir... tapi bukan untuk menutup."
-    n "Untuk MEMBUKA."
-    
-    show aura_merah at center
-    with flash_red
-    
-    play sound audio.heartbeat
-    
-    n "Gerbang bergetar hebat."
-    n "Retakan melebar."
-    n "Cahaya merah menyilaukan."
-    
-    # GERBANG TERBUKA PENUH
-    with flash_red
-    with hpunch
-    
-    n "GERBANG TERBUKA SEPENUHNYA!"
-    
     show dewa wujud_asli at right
-    
-    d "(tertawa) AKHIRNYA! SETELAH 200 TAHUN!"
-    
-    # ROH-ROH KELUAR
-    show hantu strong at center
-    show bayangan at left
     with dissolve
     
-    play sound audio.wind
+    d "(tersenyum lebar) Bijak."
     
-    n "Ribuan roh keluar dari gerbang."
-    n "Memenuhi dunia manusia."
+    show carissa takut
+    
+    c "(menatap Aksara) Maafin aku..."
+    
+    a "(bergetar) Kenapa...?"
+    
+    d "Lihat? Dia memilih dengan benar. Sekarang..."
     
     show aksara guardian at left
-    
-    a "(berteriak) CARISSA! APA YANG KAMU LAKUKAN?!"
-    
-    # CARISSA MULAI BERUBAH
-    show carissa takut at center
-    
-    c "(merasakan tubuhnya) A-apa ini?"
-    c "Tubuhku... kenapa... terasa aneh?"
-    
-    show dewa serius
-    
-    d "Itu konsekuensinya, Carissa."
-    d "Kau telah membuka gerbang."
-    d "Sekarang... kau terikat dengannya."
-    
-    show carissa sedih
-    
-    c "M-maksudnya?"
-    
-    show dewa misterius
-    
-    d "Kau tidak bisa mati. Tapi juga tidak sepenuhnya hidup."
-    d "Seperti aku. Terjebak di antara dua dunia."
-    
-    show carissa kaget
-    with vpunch
-    
-    c "NGGAK! KAMU BILANG AKU NGGAK AKAN BERKORBAN!"
-    
-    show dewa sedih
-    
-    d "Aku bilang kau tidak akan mati. Dan itu benar."
-    d "Tapi... ada harga untuk kekuatan ini."
-    
-    # AKSARA MENCOBA SELAMATKAN
-    show aksara serius
-    
-    a "(berlari ke Carissa) CARISSA!"
-    
-    show aura_merah at right
-    with flash_red
-    
-    d "(menghalangi) Sudah terlambat, Penjaga."
-    
-    show aksara marah
-    
-    a "AKU NGGAK PEDULI! AKU AKAN SELAMATKAN DIA!"
-    
-    # BATTLE (implied, tidak full battle scene)
-    play sound audio.magic
-    with flash_blue
-    with flash_red
-    
-    n "Aksara mencoba melawan Dewa."
-    n "Tapi kekuatan Dewa terlalu besar."
-    
-    show aksara khawatir
-    with hpunch
-    
-    n "Aksara terpental."
-    
-    show carissa sedih
-    
-    c "(menangis) AKSARA!"
-    
-    # EPILOG - Bad Ending
-    scene black
-    with Dissolve(2.0)
-    
-    centered "{color=#f00}★ BAD ENDING ★{/color}"
-    pause 1.5
-    centered "{color=#fff}DUNIA YANG KACAU{/color}"
-    pause 2.0
-    
-    scene bg jalan_kota
     with dissolve
     
-    play music audio.tension fadein 2.0
+    d "Kau tidak bisa berbuat apa-apa lagi."
     
-    n "Dunia berubah selamanya."
-    n "Manusia dan roh hidup berdampingan."
-    n "Tapi bukan dalam harmoni."
+    a "(menggenggam senjata) Aku tidak akan membiarkanmu!"
     
-    n "Yang takut menjadi paranoid."
-    n "Yang dendam mencari pembalasan."
-    n "Chaos di mana-mana."
+    play sound "sfx_combat.ogg"
+    
+    n "Aksara melesat maju, cahaya suci mengelilingi tubuhnya."
+    
+    n "Namun kekuatan Dewa sudah terlalu kuat. Dari belakang gerbang batu terbuka, memberi energi gelap mengalir bebas."
+    
+    show aksara guardian at center
+    with vpunch
+    
+    a "(terjatuh, napas tersengal) Ngh...!"
+    
+    
+    d "(tertawa dingin) Sudah kubilang. Kau tidak bisa menang."
+    
+    show carissa sedih at left
+    with dissolve
+    
+    c "(berbisik) Aksara..."
+    
+    a "(mengangkat kepala) Carissa... tolong... kita masih bisa—"
+
+    c "(menggeleng pelan) Tidak, Aksara. Hentikan."
+    
+    a "Apa...?"
+    
+    c "Menyerahlah. Kamu tidak bisa menang. Tidak ada gunanya."
+    
+    a "(dengan suara parau) Kenapa kamu bilang begitu...? Carissa, ini bukan dirimu!"
+
+    c "(suara bergetar) Ini memang aku. Aku yang sebenarnya."
+    a "(berusaha berdiri) Tidak... kamu lebih kuat dari ini. Kamu punya nenekmu, kamu punya—"
+    
+    c "(memotong) Nenek? Ya, kamu benar."
+    
+    show carissa marah
+    
+    c "Tapi apa itu cukup? Aku tetap sendirian, Aksara."
+    
+    a "Carissa..."
+    
+    c "Semua orang punya keluarga utuh. Ayah, ibu, kakak, adik. Tapi aku?"
+    
+    c "(tertawa getir) Aku cuma punya nenek tua yang bahkan nggak bisa ngerti apa yang aku rasain."
+    
+    a "(menggeleng keras) Itu tidak benar! Nenekmu sayang sama—"
+    
+    c "Sayang?! Dia bahkan nggak nenangin aku waktu susah tidur setiap malam!"
+    
+    show carissa sedih
+    
+    c "(suara melemah) Dia nggak ngerti kenapa aku selalu merasa... kosong."
+    
+    hide dewa wujud_asli
+    with dissolve
+    
+    n "Suara berbisik mulai terdengar di sekitar Carissa. Lembut tapi beracun."
+    
+    d "(suara gaib) Ya... kau sendirian... selalu seperti itu..."
+    
+    show carissa takut
+    
+    c "(memegang kepala) Hentikan..."
+    
+    d "Bahkan saat nenekmu memelukmu... kau masih merasa hampa, bukan?"
+    
+    c "(bergetar) A-aku..."
+    
+    a "(merangkak mendekati) Carissa!"
+    
+    a "Jangan dengarkan bisikan itu!"
+    
+    show carissa sedih
+    
+    c "(menatap kosong)"
+    
+    scene kamar_carissa
+    with dissolve
+    
+    "FLASHBACK: Malam pertama Carissa tiba di rumah Nenek."
+    
+    show carissa sedih at center
+    
+    c "(monolog) Pertama kali aku datang ke sini... aku merasa aneh."
+    
+    c "Seperti ada yang memanggilku bilang... 'Aku mengerti kamu.'"
+    
+    d "(suara bisikan) Tenang... aku di sini..."
+    
+    c "(berbaring di tempat tidur) Siapa...?"
+    
+    d "Orang yang kau percayai..."
+    
+    scene bg candi_gerbang
+    with dissolve
+    
+    show carissa bingung at left
+    
+    c "(tersadar) Apa itu tadi?"
+    
+    c "Semua itu..."
+    
+    show dewa wujud_asli at right
+    with dissolve
+    
+    d "(muncul kembali) Aku hanya membantumu melihat kebenaran."
+    
+    d "Bahwa kau memang sendirian. Bahwa tidak ada yang benar-benar peduli."
+    
+    show aksara guardian at center
+    with vpunch
+    
+    a "(berteriak) ITU BOHONG!"
+
+    a "Nenekmu merawatmu! Dia benar-benar menyayangimu."
+    
+    a "Dan aku... aku juga peduli padamu, Carissa!"
+    
+    show carissa takut
+    
+    c "(menatap Aksara dengan berkaca-kaca) Tapi... kenapa rasanya tetap sakit?"
+    
+    a "Karena dia yang bikin seolah-olah kamu merasa begitu."
+    
+    a "(menunjuk Dewa) Dia memanfaatkanmu!"
+    
+    d "(tertawa) Oh... Bukan aku."
+    
+    show carissa sedih
+    
+    c "(berlutut) Aku... aku tidak tahu lagi..."
+    
+    c "Mana yang beneran... mana yang bukan..."
+    
+    a "(merangkak lebih dekat) Carissa, dengarkan aku."
+    
+    a "Perasaanmu itu nyata. Kesedihanmu itu nyata. Tapi..."
+    
+    a "Kamu tidak sendirian."
+    
+    c "(mengangkat kepala) Aksara..."
+    
+    d "(nada dingin) Terlambat."
+    
+    show dewa wujud_asli at center
+    with vpunch
+
+    show carissa kaget 
+    with hpunch
+
+    show aksara guardian at right
+    with dissolve
+
+    play sound "dark_power.ogg"
+    
+    n "Energi gelap dari gerbang mulai mengalir ke tubuh Carissa."
+    
+    show carissa takut
+    with hpunch
+    
+    c "(berteriak) AKH! APA INI?!"
+    
+    d "Ini hadiah untukmu, biar ga pernah merasa sakit lagi."
+    
+    a "(berusaha meraih Carissa) CARISSA, TIDAK!"
+    
+    n "Tapi sudah terlambat."
+    
+    scene bg black
+    with fade
+    
+    n "Cahaya menelan segalanya."
+    
+    scene bg candi_reruntuhan
+    with fade
+    
+    show aksara guardian at center
+    with dissolve
+    
+    a "(terbaring lemah) Carissa... di mana..."
+    
+    show carissa corrupted at right
+    with dissolve
+    
+    n "Carissa berdiri di depannya. Tapi matanya kosong. Tidak ada kehangatan di sana."
+    
+    c "(dengan suara datar) Aku di sini, Aksara."
+    
+    a "(bergetar) Carissa... kamu..."
+    
+    c "Aku tidak merasakan apa-apa lagi. Tidak sakit. Tidak sedih."
+    
+    c "(tersenyum hambar) Tidak sendirian."
+    
+    a "(menangis) Ini bukan yang kamu inginkan..."
+    
+    c "Ini persis yang aku inginkan."
+    
+    show dewa wujud_asli at left
+    with dissolve
+    
+    d "(merangkul bahu Carissa) Sekarang dia milikku."
+    
+    d "Dan dunia ini... akan segera menyusul."
+    
+    scene black
+    with fade
+    
+    centered "{color=#8B0000}BAD ENDING{/color}"
+    centered "{color=#8B0000}TERTELAN KEGELAPAN{/color}"
+    
+    centered "Carissa memilih untuk membuka gerbang."
+    centered "Kekuatan gelap Dewa yang telah lama membisikinya akhirnya mengambil alih sepenuhnya."
+    centered "Aksara gagal menyelamatkan Carissa."
+
+    centered "Dewa pun memanfaatkan Darah Rakta milik Carissa untuk membuka Gerbang Roh."
+    centered "Dan kegelapan perlahan menyebar ke seluruh dunia..."
+    
+    centered "{color=#fff}TAMAT{/color}"
+    pause 2.0
+    centered "{color=#888}Terima kasih telah bermain{/color}"
+    centered "{color=#888}'Veil of Two Fates'{/color}"
+    pause 2.0
+
+# ================================================
+# NEUTRAL ENDING - Aksara's Sacrifice
+# ================================================
+
+label ending_neutral:
+    $ aksara_points += 3
+    
+    scene bg candi_gerbang
+    with dissolve
     
     show carissa sedih at center
     with dissolve
     
-    n "Carissa hidup sebagai Penjaga Gerbang."
-    n "Terjebak. Tidak bisa mati. Tidak sepenuhnya hidup."
-    n "Ia menyesal... tapi sudah terlambat."
+    c "(dengan suara gemetar) Aku... aku tidak bisa memilih..."
     
-    c "(berbisik) Maafin aku... Aksara... Nenek..."
-    c "Aku... salah pilih."
-    
-    scene black
-    with Dissolve(2.0)
-    
-    centered "{color=#fff}TAMAT{/color}"
-    pause 2.0
-    centered "{color=#888}Pilihan memiliki konsekuensi...{/color}"
-    pause 2.0
-    
-    return
-
-# ================================================
-# NEUTRAL ENDING - Solo Path, Both Disappear
-# ================================================
-
-label ending_neutral:
-    scene bg candi_gerbang
-    with dissolve
-    
-    show carissa serius at center
-    with dissolve
-    
-    c "(berteriak) AKU NGGAK MAU PILIH KALIAN BERDUA!"
-    
-    show aksara kaget at left
-    show dewa kaget at right
-    with dissolve
-    
-    a "Carissa?!"
-    d "Apa maksudmu?!"
-    
-    show carissa normal
-    
-    c "Aku... aku akan cari jalan sendiri!"
-    c "Jalan yang nggak harus ngorbanin siapapun!"
-    
-    show dewa serius
-    
-    d "Itu mustahil!"
-    
-    show aksara khawatir
-    
-    a "Carissa, itu berbahaya!"
-    
-    show carissa serius
-    
-    c "Aku nggak peduli!"
-    c "Ini tubuhku! Ini darahku!"
-    c "AKU YANG TENTUIN!"
-    
-    # CARISSA MENGAMBIL JALAN SENDIRI
-    play sound audio.magic
-    
-    show kalung_glow at center
-    with flash_blue
-    
-    n "Carissa menyentuh gerbang dengan kedua tangannya."
-    n "Ia mencoba... menutup gerbang TANPA pengorbanan penuh."
-    
-    show aura_biru at center
-    show aura_merah at center
-    with dissolve
-    
-    n "Energi biru dan merah bercampur secara chaos."
-    n "Tidak stabil. Berbahaya."
-    
-    show aksara serius
-    
-    a "CARISSA! ENERGINYA TERLALU KUAT!"
-    
-    show dewa marah
-    
-    d "DIA AKAN MELEDAK!"
-    
-    # KEDUANYA MENCOBA BANTU
     show aksara guardian at left
-    with flash_blue
+    with dissolve
     
-    a "(berlari) AKU AKAN BANTU STABILKAN!"
+    a "(menatap Carissa) Carissa..."
     
     show dewa wujud_asli at right
-    with flash_red
+    with dissolve
     
-    d "(terpaksa) ...Aku juga."
+    d "(tersenyum tipis) Tidak bisa memilih? Lemah."
     
-    # LEDAKAN ENERGI
-    play sound audio.magic
-    with flash_white
-    with hpunch
+    show carissa marah
     
-    scene white
+    c "BUKAN! Aku bukan lemah!"
     
-    n "Energi meledak!"
-    n "Cahaya putih menyilaukan!"
+    c "(menatap Aksara) Aku hanya... tidak mau ada yang terluka lagi."
     
-    scene black
-    with Dissolve(2.0)
+    a "(melangkah maju) Carissa, kamu tidak perlu menanggung ini sendirian."
     
-    # AFTERMATH
+    a "Ada cara lain."
+    
+    c "Cara lain?"
+    
+    a "(menatap gerbang) Gerbang ini..."
+    
+    a "Butuh seseorang yang bisa mengunci Dewa selamanya, tapi tetap membiarkan roh-roh lain hidup bebas."
+    
+    d "(tertawa mengejek) Kau pikir kau bisa menandingi kekuatanku?"
+    
+    a "(menatap tajam) Aku tak perlu mengalahkanmu. Aku hanya perlu... menahanmu."
+    
+    show carissa takut
+    
+    c "Aksara, tunggu—kamu ngomong apa?"
+    
+    a "(tersenyum lembut) Aku adalah Nirantara. Ini tugasku sejak awal."
+    
+    a "Melindungi keseimbangan dunia ini."
+    
+    c "(menggeleng keras) Tidak! Pasti ada cara lain!"
+    
+    a "Tidak ada, Carissa. Jika gerbang ditutup sepenuhnya, semua roh akan terkurung termasuk yang tidak bersalah."
+    
+    a "Jika gerbang terbuka... Dewa akan bebas merusak segalanya."
+    
+    a "Tapi jika ada penjaga yang mengunci gerbang dari dalam..."
+    
+    a "Dewa akan terkurung. Roh-roh lain tetap bisa hidup di dunia manusia, dunia akan tetap aman."
+    
+    c "(air mata mulai jatuh) Tapi... kamu..."
+    
+    a "Aku akan baik-baik saja. Ini pilihan yang harus aku buat."
+    
+    d "(murka) KAU PIKIR KAU SIAPA?!"
+    
+    show dewa wujud_asli at center
+    with vpunch
+    
+    play sound "sfx_dark_power.ogg"
+    
+    n "Energi gelap meledak dari tubuh Dewa, membuat tanah berguncang."
+    
+    show aksara guardian at center
+    with dissolve
+    
+    a "(mengangkat tangan, cahaya suci pun muncul)"
+    
+    a "Aku hanya perlu mengikatmu... selamanya."
+    
+    play sound "holy_power.ogg"
+    
+    n "Cahaya biru tua memancar dari tubuh Aksara, membentuk rantai-rantai energi yang melilit Dewa."
+    
+    d "(berteriak) TIDAK! LEPASKAN!"
+    
+    a "(dengan tenang) Ini adalah pengorbananku."
+    
+    
+    n "Aksara berjalan mendekati gerbang, sementara rantai cahaya terus mengikat Dewa."
+    
+    show aksara guardian at center
+    with dissolve
+    
+    show carissa sedih at left
+    with dissolve
+    
+    c "(berlari) AKSARA, JANGAN!"
+    
+    a "(berbalik, tersenyum) Carissa... kamu kuat. Lebih kuat dari yang kamu kira."
+    
+    c "(menangis) Aku tidak mau kamu pergi..."
+    
+    a "Aku tidak pergi. Aku akan selalu di sini."
+    
+    a "(menatap lembut) Dan kamu... harus hidup. Untuk nenekmu. Untuk dirimu sendiri."
+    
+    c "Tapi—"
+    
+    a "Jangan biarkan kesepianmu menang. Kamu punya orang yang sayang sama kamu."
+    
+    a "Kamu tidak sendirian, Carissa. Tidak pernah."
+    
+    show carissa takut
+    
+    c "(mengulurkan tangan) Aksara..."
+    
+    a "(tersenyum terakhir kali) Terima kasih... sudah mengingatkanku kenapa aku menjadi Nirantara."
+    
+    play sound "light_explosion.ogg"
+    
+    scene bg white
+    with flash
+    
+    n "Cahaya menyilaukan memenuhi sekitar candi."
+    
+    show carissa sedih at center
+    with dissolve
+    
+    c "(terjatuh) Aksara..."
+    
+    "Gerbang sekarang berkilauan dengan cahaya biru putih. Di permukaannya, terukir simbol rumit."
+    
+    "Carissa bisa merasakan—Aksara ada di sana."
+    
+    c "(menyentuh gerbang) Aku janji... aku akan hidup dengan baik."
+    
+    c "Aku tidak akan menyia-nyiakan pengorbananmu."
+    
+    scene bg ruang_tamu_terang
+    with fade
+    
+    n "Beberapa hari kemudian..."
+    
+    show nenek normal at right
+    with dissolve
+    
+    n "Carissa! Makan siang sudah siap!"
+    
+    show carissa normal at left
+    with dissolve
+    
+    c "(tersenyum kecil) Iya, Nek. Tunggu sebentar."
+    
+    "Carissa menatap ke arah luar jendela."
+    
+    c "(dalam hati) Terima kasih, Aksara."
+    
+    
+    "Kehidupan Carissa berlanjut dengan damai."
+    
+    "Roh-roh masih ada dengan muncul dimana-mana."
+    
+    "Tapi mereka tidak berbahaya lagi. Tanpa iming-iming kekuatan dari Dewa, mereka hanya... ada."
+    
+    "Hidup berdampingan dengan manusia, seperti yang seharusnya."
+    
+    show carissa normal at center
+    with dissolve
+    
+    c "(menatap langit) Dunia ini... berbeda sekarang."
+    
+    c "Tidak sempurna. Tapi... lebih baik."
+    
     scene bg candi_gerbang
+    with fade
+    
+    "Di dalam candi, gerbang masih berdiri kokoh."
+    
+    "Cahaya biru berkilauan lembut di permukaannya."
+    
+    "Dan di balik gerbang itu, Aksara berdiri tanpa lelah menjaga agar kegelapan tidak pernah keluar lagi."
+    
+    show aksara guardian_spirit at center
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    a "(monolog internal) Ini adalah tempatku sekarang."
     
-    n "Ketika asap menghilang..."
-    n "Gerbang tertutup."
-    n "Tapi..."
+    scene bg black
+    with fade
     
-    show nenek sedih at center
-    with dissolve
+    centered "{color=#FFD700}NEUTRAL ENDING{/color}"
+    centered "{color=#FFD700}PENJAGA ABADI{/color}"
     
-    nenek "(melihat sekeliling) Carissa? CARISSA?!"
+    centered "Aksara memilih untuk menjadi penjaga gerbang selamanya."
+    centered "Dewa terkurung, tidak bisa melarikan diri."
+    centered "Roh-roh tetap hidup di dunia manusia,tanpa pengaruh jahat."
     
-    n "Carissa menghilang."
-    n "Aksara... juga menghilang."
-    n "Bahkan Dewa... lenyap."
-    
-    show nenek khawatir
-    
-    nenek "(menangis) Carissa... kemana kamu, Nduk?"
-    
-    
-    scene
+    centered "Carissa kehilangan Aksara, tapi dunia diselamatkan."
+    centered "Keseimbangan tercapai dengan pengorbanan."
+
+    centered "{color=#fff}TAMAT{/color}"
+    pause 2.0
+    centered "{color=#888}Terima kasih telah bermain{/color}"
+    centered "{color=#888}'Veil of Two Fates'{/color}"
+    pause 2.0
+
 return   
