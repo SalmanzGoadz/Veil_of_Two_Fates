@@ -292,8 +292,12 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if renpy.get_screen("main_menu"):
+            xalign 0.45
+            yalign 0.95
+        else:
+            yalign 0.5
+            xoffset 60
 
         spacing gui.navigation_spacing
 
@@ -342,6 +346,21 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    font "fonts/HelpMe.ttf"
+
+    # --- PENGATURAN WARNA (GAYA BLOODY HORROR) ---
+    color "#FFBCBC"               # Warna DIAM: Merah Darah Gelap (Biar kontras di baju putih)
+    hover_color "#ff0000ff"         # Warna KURSOR NEMPEL: Merah Terang (Menyala segar)
+    selected_color "#FFFFFF"      # Warna DIPILIH: Hitam Pekat
+    
+    size 30                       # Ukuran saya naikkan dikit biar makin jelas
+    xalign 0.5                    # Posisi tengah teks
+    
+    # --- PENGATURAN OUTLINE (GARIS TEPI) ---
+    # Outline hitam dipertebal jadi 4 pixel. 
+    # Ini kuncinya supaya warna merah tidak "tenggelam" di warna baju putih.
+    outlines [ (4, "#000000", 0, 0) ]
+
 
 
 ## Main Menu screen ############################################################
@@ -387,7 +406,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -843,6 +862,10 @@ style pref_label:
 
 style pref_label_text:
     yalign 1.0
+    color "#990000"                 # Merah Darah
+    outlines [ (3, "#000000", 0, 0) ] # Outline Hitam Tebal (WAJIB)
+    font "fonts/HelpMe.ttf"
+
 
 style pref_vbox:
     xsize 338
@@ -856,6 +879,10 @@ style radio_button:
 
 style radio_button_text:
     properties gui.text_properties("radio_button")
+    color "#ffffff"               # Paksa jadi PUTIH
+    hover_color "#ff0000"         # Merah saat disentuh (opsional)
+    selected_color "#ff0000"      # Merah saat dipilih (biar beda dikit)
+    outlines [ (3, "#000000", 0, 0) ]
 
 style check_vbox:
     spacing gui.pref_button_spacing
@@ -866,6 +893,10 @@ style check_button:
 
 style check_button_text:
     properties gui.text_properties("check_button")
+    color "#ffffff"               # Paksa jadi PUTIH
+    hover_color "#ff0000"
+    selected_color "#ff0000"
+    outlines [ (3, "#000000", 0, 0) ] # GARIS TEPI HITAM
 
 style slider_slider:
     xsize 525

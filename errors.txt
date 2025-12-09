@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 638: choice menuitem expects a non-empty block.
-    "Aksara, kamu gapapa?":
-                           ^
+File "game/script.rpy", line 1996: '{' was never closed
+    centered "{color=#fff}Hari Sabtu - Sekolah Diliburkan{/color}"
+              ^
 
-Ren'Py Version: Ren'Py 8.4.0.25071206
-Fri Oct 31 13:07:31 2025
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Tue Dec  9 11:09:45 2025

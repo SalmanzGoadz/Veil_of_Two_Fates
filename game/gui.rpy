@@ -24,32 +24,32 @@ define config.check_conflicting_properties = True
 ##
 ## The colors of text in the interface.
 
-## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#cc0066'
+define gui.accent_color = '#990000'
 
-## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+## Warna yang di gunakan untuk warna tombol text jika di pilih atau di tekan.
+define gui.idle_color = '#222222'
 
-## The small color is used for small text, which needs to be brighter/darker to
-## achieve the same effect.
-define gui.idle_small_color = '#aaaaaa'
+## Warna kecil yang di gunakan untuk text kecil, yang membutuhkan lebih terang/
+## lebih gelap untuk mencapai efek yang sama
+define gui.idle_small_color = '#333333'
 
-## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#e066a3'
+## Warna yang di gunakan untuk tombol dan bar yang di pilih.
+define gui.hover_color = '#ff0000'
 
-## The color used for a text button when it is selected but not focused. A
-## button is selected if it is the current screen or preference value.
+## Warna yang digunakan untuk text tombol ketika di pijit tapi tidak di fokus.
+## Tombol di pilih jika terdapat di layar saat ini atau value preferensi.
 define gui.selected_color = '#ffffff'
 
-## The color used for a text button when it cannot be selected.
+## Warna yang di gunakan untuk tombol text ketika tidak bisa di pilih.
 define gui.insensitive_color = '#8888887f'
 
-## Colors used for the portions of bars that are not filled in. These are not
-## used directly, but are used when re-generating bar image files.
-define gui.muted_color = '#510028'
-define gui.hover_muted_color = '#7a003d'
+## Warna yang di gunakan untuk beberapa bagian dari bar yang tidak terisi. Ini
+## tidak di gunakan secara langsung, Tapi di gunakan ketika me regenerasi file
+## gambar bar.
+define gui.muted_color = '#003d51'
+define gui.hover_muted_color = '#005b7a'
 
-## The colors used for dialogue and menu choice text.
+## Warna yang di gunakan untuk dialog dan text pilihan menu.
 define gui.text_color = '#ffffff'
 define gui.interface_text_color = '#ffffff'
 
@@ -87,7 +87,7 @@ define gui.title_text_size = 75
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = "gui/main_menu.jpg"
 define gui.game_menu_background = "gui/game_menu.png"
 
 
