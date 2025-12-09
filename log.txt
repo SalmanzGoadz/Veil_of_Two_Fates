@@ -1,215 +1,42 @@
-2025-12-09 05:22:41 UTC
-Windows-10-10.0.19045-SP0
-Ren'Py 8.4.1.25072401
+2025-12-09 15:37:36 UTC
+Windows-11-10.0.26100-SP0
+Ren'Py 8.4.0.25071206
 
-Early init took 79 ms
-Loading error handling took 39 ms
-Loading script took 235 ms
-Loading save slot metadata took 43 ms
+Early init took 37 ms
+Loading error handling took 26 ms
+Loading script took 202 ms
+Loading save slot metadata took 196 ms
 Loading persistent took 0 ms
-Running init code took 67 ms
-Loading analysis data took 8 ms
-Analyze and compile ATL took 4 ms
-Reloading save slot metadata took 36 ms
-Dump and make backups took 75 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 65 ms
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 449 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 39 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 448 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 950M/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 536.45'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 12 ms
-Loading error handling took 44 ms
-Loading script took 225 ms
-Loading save slot metadata took 27 ms
-Loading persistent took 0 ms
-Running init code took 119 ms
-Loading analysis data took 11 ms
-Analyze and compile ATL took 5 ms
-Reloading save slot metadata took 27 ms
-Dump and make backups took 74 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 70 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 32 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 2 ms
-Interface start took 406 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 950M/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 536.45'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 15 ms
-Loading error handling took 40 ms
-Loading script took 2938 ms
-Loading save slot metadata took 31 ms
-Loading persistent took 0 ms
-Running init code took 119 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 5 ms
-Reloading save slot metadata took 27 ms
-Backing up script files to 'C:\\Users\\Haikal\\AppData\\Roaming/RenPy/backups\\Veil_of_Two_Fates':
-Dump and make backups took 77 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 76 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 17 ms
-Save screen analysis took 16 ms
-Save pyanalysis took 0 ms
-Save bytecode took 3 ms
-Running _start took 1 ms
-Interface start took 380 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 950M/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 536.45'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 12 ms
-Loading error handling took 23 ms
-Loading script took 243 ms
-Loading save slot metadata took 37 ms
-Loading persistent took 0 ms
-Running init code took 130 ms
-Loading analysis data took 5 ms
+Running init code took 126 ms
+Loading analysis data took 15 ms
 Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 27 ms
-Dump and make backups took 85 ms
+Reloading save slot metadata took 174 ms
+Backing up script files to 'C:\\Users\\HP\\AppData\\Roaming/RenPy/backups\\Veil_of_Two_Fates':
+Dump and make backups took 37 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 79 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
+Initial gc took 33 ms
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 4 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 20 ms
-Save screen analysis took 17 ms
+Load screen analysis took 7 ms
+Analyze screens took 6 ms
+Save screen analysis took 10 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 2 ms
-Interface start took 380 ms
+Save bytecode took 25 ms
+Running _start took 1 ms
+Interface start took 755 ms
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
 Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 950M/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 536.45'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 701, in script
-    show npc generic at
-  File "renpy/ast.py", line 1357, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ast.py", line 726, in show_imspec
-    at_list = [renpy.python.py_eval(i) for i in at_list]
-               ~~~~~~~~~~~~~~~~~~~~^^^                  
-  File "renpy/python.py", line 1292, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1285, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 701, in <module>
-    show npc generic at
-                       
-NameError: name 'righ' is not defined. Did you mean: 'right'?
-
-While running game code:
-  File "game/script.rpy", line 701, in script
-    show npc generic at
-  File "game/script.rpy", line 701, in <module>
-    show npc generic at
-                       
-NameError: name 'righ' is not defined. Did you mean: 'right'?
-Resetting cache.
-Early init took 22 ms
-Loading error handling took 37 ms
-Loading script took 2844 ms
-Loading save slot metadata took 35 ms
-Loading persistent took 1 ms
-Running init code took 118 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 4 ms
-Reloading save slot metadata took 22 ms
-Backing up script files to 'C:\\Users\\Haikal\\AppData\\Roaming/RenPy/backups\\Veil_of_Two_Fates':
-Dump and make backups took 70 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 74 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 20 ms
-Save screen analysis took 14 ms
-Save pyanalysis took 0 ms
-Save bytecode took 3 ms
-Running _start took 2 ms
-Interface start took 417 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 950M/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 536.45'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Vendor: 'Intel'
+Renderer: 'Intel(R) UHD Graphics'
+Version: '4.6.0 - Build 31.0.101.5186'
+Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1366, 'current_h': 768, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
+Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
 Maximum texture size: 4096x4096

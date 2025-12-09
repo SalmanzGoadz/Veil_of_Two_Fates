@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1996: '{' was never closed
-    centered "{color=#fff}Hari Sabtu - Sekolah Diliburkan{/color}"
-              ^
+File "game/script.rpy", line 3103: expecting name after dot.
+    play sound audio.footstep1x volume 3    .0 fadeout 1.0
+                                             ^
 
-Ren'Py Version: Ren'Py 8.4.1.25072401
-Tue Dec  9 11:09:45 2025
+Ren'Py Version: Ren'Py 8.4.0.25071206
+Tue Dec  9 21:15:52 2025

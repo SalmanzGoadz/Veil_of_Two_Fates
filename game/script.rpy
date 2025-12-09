@@ -340,7 +340,7 @@ label scene1_rumah_tua:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Tidak ada jawaban."
     stop sound
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.wind2 volume 2.0 fadeout 1.0
     n "Angin berhembus lembut ke arahnya, membawa dingin yang menusuk hingga ke tulang."
     stop sound
     
@@ -359,7 +359,7 @@ label scene1_rumah_tua:
     stop music fadeout 2.0
 
     play sound audio.keyyi volume 1.0 fadeout 1.0
-    play sound audio.bisikan fadeout 0.3 volume 2.0
+    play sound audio.bisikan volume 2.0 fadeout 1.0
     suara "Carissa..."
     stop sound
 
@@ -607,7 +607,7 @@ label scene2_sekolah_pagi:
     n "Akhirnya ia menunduk dengan pasrah."
     stop sound
     
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 2.0 fadeout 1.0
     a "(menghela napas) Tapi ingat satu hal—"
     stop sound
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -713,14 +713,14 @@ label scene3_kelas:
     
     show dewa misterius
     
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     n "Saat mata mereka bertemu, seolah waktu berhenti."
     stop sound
     
     show mata_biru at center
     with flash_white
     
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     n "Sekilas, Carissa melihat bayangan api biru berpendar di balik mata Dewa."
     stop sound
     
@@ -752,13 +752,13 @@ label scene3_kelas:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Guru mempersilakan Dewa duduk."
     stop sound 
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x loop volume 2.0 fadeout 1.0
     n "Ia berjalan melewati bangku Carissa."
     stop sound
     with hpunch
 
     show carissa normal
-    play sound audio.heartbeat3
+    play sound audio.heartbeat3 volume 2.0 fadeout 1.0
     c "(dalam hati) Kenapa dadaku—"
     stop sound
 
@@ -798,7 +798,7 @@ label scene4_perpustakaan:
     show carissa bingung
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(dalam hati) Aku yakin tadi ada suara kayaknya..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisper volume 2.0 fadeout 6.0
     d "(suara pelan dari belakang) Kamu sering sendirian ya."
     
     show carissa kaget at right
@@ -807,7 +807,7 @@ label scene4_perpustakaan:
     
     show dewa normal at left
     with easeinleft
-    play sound audio.kagetperpus volume 0.5
+    play sound audio.kagetperpus volume 2.0
     c "(terkejut) Dewa! Ngapain kamu ada di sini?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     show dewa senyum
@@ -837,7 +837,7 @@ label scene4_perpustakaan:
     c "(mencoba bercanda) Kamu pura-pura jadi cenayang ya? Bisa baca pikiran gitu."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(pelan) Aku ga bisa baca pikiran. Tapi aku bisa liat dari tatapan aja."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     show carissa takut
@@ -857,6 +857,7 @@ label scene4_perpustakaan:
     n "Carissa ingin menjawab, namun suaranya seperti tersangkut di tenggorokan. Tatapan Dewa terlihat sama seperti sebelumnya."
     
     show dewa misterius
+    play sound audio.tensionh volume 2.0 
     play sound audio.ambilbuku volume 4.0
     d "(mengambil buku dari rak atas yang gak keliatan Carissa) Ini yang kamu cari?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -865,7 +866,7 @@ label scene4_perpustakaan:
     d "(tersenyum) Beruntung aja sih. (menatap cover buku) ...Mitos lokal ya? Tertarik sama cerita rakyat?" 
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Eh... iya sih."
-    play sound audio.balikbuku loop volume 4.0
+    play sound audio.balikbuku loop volume 4.0 fadeout 1.0
     d "(membalik-balik halaman)"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Ehhh, kamu udah belum liatnya?"
@@ -880,7 +881,7 @@ label scene4_perpustakaan:
     
     hide dewa senyum
     with easeoutleft
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x loop volume 2.0 fadeout 1.0
     n "Langkah Dewa perlahan menjauh di antara rak-rak buku, meninggalkan aroma samar parfum yang menenangkan namun anehnya... terasa mencekam."
     
     show carissa sedih at center
@@ -917,7 +918,8 @@ label scene5_halaman_belakang:
     
     show dewa misterius at right
     with easeinright
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
+    play sound audio.foostephskl volume 2.0 fadeout 1.0
     n "Dewa berjalan dengan tenang, lalu sekilas menatap ke arah Carissa yang baru keluar."
     
     hide dewa
@@ -929,7 +931,7 @@ label scene5_halaman_belakang:
     
     show carissa normal at right
     with easeinright
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.foostephskl volume 2.0 fadeout 1.0
     n "Carissa berjalan keluar, menatap langit yang mulai berubah jingga."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Aksara! Kamu dari tadi di sini?"
@@ -945,7 +947,7 @@ label scene5_halaman_belakang:
     
     show aksara serius
     with vpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.shockdikit volume 2.0 fadeout 1.0
     a "(mendadak tegang) Kamu bilang... Dewa?"
     
     show carissa bingung
@@ -982,7 +984,7 @@ label accept_aksara:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Aksara menatapnya lama, seperti sedang mempertimbangkan sesuatu."
     
-    play sound audio.menghela volume 2.0
+    play sound audio.menghela volume 2.0 fadeout 1.0
     a "(menghela napas) Carissa... nama itu."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Dewa..."
@@ -1014,7 +1016,7 @@ label accept_aksara:
     a "Janji sama aku... jangan terlalu deket sama dia sampai aku yakin sendiri."
     
     show carissa normal
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gulp volume 3.0 fadeout 1.0
     n "Carissa menelan ludah, merasakan keseriusan dari kata-kata Aksara."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun ia pun melakukan pinky promise dengan Aksara—mereka masing-masing mengaitkan jari kelingking satu sama lain."
@@ -1065,7 +1067,7 @@ label after_choo:
     
     hide aksara
     with easeoutleft
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.foostephskl volume 1.0 fadeout 5.0
     n "Aksara berjalan pergi, meninggalkan Carissa sendirian."
     
     show carissa bingung at center
@@ -1074,20 +1076,20 @@ label after_choo:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Apa yang sebenarnya dia tau tentang Dewa?"
     
-    play sound audio.windrumput volume 3.0 fadein 0.3 fadeout 1.0
+    play sound audio.windrumput volume 3.0 fadeout 1.0
     n "Angin tiba-tiba berhembus kencang."
     
     with hpunch
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Daun-daun beterbangan."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 1.0 fadeout 1.0
     suara "(bergema dari arah pohon) Carissa..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "Darahmu... kunci kami..."
     
     show carissa takut
     with vpunch
-    play sound audio.menoleh fadeout 2.0
+    play sound audio.menoleh volume 3.0 fadeout 2.0
     c "(menoleh cepat) Siapa itu?!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun tidak ada siapa-siapa."
@@ -1127,10 +1129,10 @@ label chapter2_start:
 
     # ===== SCENE BARU: Morning Routine =====
     scene bg kamar_carissa with dissolve
-    play sound audio.alarm_clock fadein 0.3
+    play sound audio.alarm_clock volume 3.0
 
     show carissa normal at center with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.yawn volume 3.0 fadeout 1.0
     c "(menguap) Hmmm... pagi lagi."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa melakukan rutinitas pagi seperti biasa."
@@ -1181,7 +1183,7 @@ label scene1_mimpi_buruk:
     n "Seluruh ruangan berwarna merah gelap dan ungu pucat."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Bayangan-bayangan bergerak di dinding tanpa sumber cahaya."
-    play sound audio.ngomongdewek volume 2.0
+    play sound audio.bisikan volume 2.0
     suara "(bergema dari segala arah) Carissaaaa..."
     
     show carissa takut
@@ -1194,15 +1196,16 @@ label scene1_mimpi_buruk:
     
     play sound audio.heartbeat1 fadein 0.3 fadeout 1.0
     n "Sosok-sosok gelap mulai muncul dari balik pintu."
+    stop sound
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Mereka mendekat dengan gerakan tidak wajar—meluncur tanpa kaki."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "Darahmu..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "Beri kami..."
     
     show carissa kaget
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.female volume 2.0 
     c "(berteriak) PERGI! JANGAN DEKATI AKU!"
     
     # MINIGAME 1: Dodge Game
@@ -1214,7 +1217,7 @@ label scene1_mimpi_buruk:
     # Jika berhasil: lanjut ke dialog sukses
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa mengepal kedua tangannya dengan erat."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.larii2 volume 1.0 fadeout 1.0
     n "Ia berlari menghindari bayangan-bayangan yang mengejarnya."
     
     show hantu medium at right
@@ -1229,14 +1232,21 @@ label scene1_mimpi_buruk:
     n "Carissa semakin ketakutan, meringkuk dengan badannya yang mungil."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun tiba-tiba, secercah cahaya biru menyinari sekeliling Carissa."
+
+    hide carissa_kaget with dissolve
+    hide hantu_medium with dissolve
+    scene none
+    call minigame_dodge
+
     
+    scene ruang_tamu_temaram
     hide hantu medium
     with flash_blue
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.scream volume 2.0 fadeout 1.0
     n "Bayangan-bayangan itu menjerit dan menghilang satu per satu."
     
-    show carissa normal at center
-    play sound audio.breathcapek volume 1.0 
+    show carissa_kaget at center
+    play sound audio.breathcapek volume 2.0 fadeout 1.0
     c "(terengah-engah) A-apa itu tadi?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa masih terpana dengan kejadian barusan—tidak percaya dengan mata kepalanya sendiri."
@@ -1252,7 +1262,7 @@ label scene1_mimpi_buruk:
     
     show carissa takut at center
     with vpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.huh volume 1.0 fadeout 1.0
     c "(terbangun) Hah... hah..."
     play sound audio.detikjam fadeout 1.0
     n "Jam di meja menunjukkan pukul 5 pagi."
@@ -1290,12 +1300,12 @@ label scene2_perjalanan_pagi:
     
     show carissa kaget
     with vpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gasp volume 1.0 fadeout 1.0
     c "Astaga! Jimatnya ketinggalan!"
     
     play sound audio.windrumput volume 3.0 fadein 0.3 fadeout 1.0
     n "Tiba-tiba, angin bertiup kencang. Dedaunan kering beterbangan tak karuan."
-    play sound audio.ngomongdewek volume 3.0 fadeout 1.0
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     suara "(bergema dari segala arah) Carissaaaa..."
     
     show carissa takut
@@ -1305,13 +1315,13 @@ label scene2_perjalanan_pagi:
     n "Bayangan-bayangan mulai muncul dari berbagai sudut jalan."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Sosok-sosok transparan dengan mata kosong mulai mendekat."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisper volume 1.0 fadeout 1.0
     suara "Tanpa pelindung..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "Kau milik kami..."
     
     show carissa kaget
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.female volume 1.0 fadeout 1.0
     c "(berteriak) JANGAN MENDEKAT PERGI SANAA!"
     
     hide carissa kaget
@@ -1350,7 +1360,7 @@ label scene3_praktik_lapangan:
     scene bg halaman_belakang
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterysound2 volume 0.4 fadein 1.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Jam pelajaran ketiga. Praktik Biologi di luar kelas."
     
@@ -1395,7 +1405,7 @@ label scene3_praktik_lapangan:
     with dissolve
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Mereka berjalan ke area yang lebih sepi di belakang taman."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.windrumput volume 1.0 fadeout 1.0
     n "Hanya terdengar suara angin dan dedaunan yang bergesek."
     
     show dewa senyum
@@ -1407,7 +1417,7 @@ label scene3_praktik_lapangan:
     c "(melirik) Kamu stalker ya?!"
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "Haha, bukan gitu maksudku..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Ada sesuatu yang kamu miiki... yang nggak ada di orang lain."
@@ -1441,7 +1451,7 @@ label scene3_praktik_lapangan:
     c "K-kenapa tiba-tiba nanya gitu?"
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(menatap langit) Yah... cuma penasaran aja sih."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "(tersenyum tipis) Kan jawaban orang beda-beda."
@@ -1475,7 +1485,7 @@ label tell_dewa:
     c "Kadang ada yang cuma lewat, tapi ada juga yang sampe natap aku lama banget."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     n "Mata Dewa berubah. Ada kilauan biru samar di dalamnya."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "(serius) Kamu takut?"
@@ -1510,7 +1520,7 @@ label avoid_dewa_talk:
     c "Udah yuk kita selesain praktiknya. Nanti dikumpulin lho."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     n "Dewa menatapnya lama. Ada kekecewaan samar di wajahnya."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "(pelan) Hmm... baiklah."
@@ -1522,7 +1532,7 @@ label avoid_dewa_talk:
     jump after_dewa_choice_scene3
 
 label after_dewa_choice_scene3:
-    play sound audio.windrumput fadein 2.0 volume 3.0
+    play sound audio.windrumput fadein 0.5 volume 3.0
     n "Angin berhembus pelan. Dedaunan kering beterbangan di mana-mana."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa dan Dewa melanjutkan praktik yang tercantum di kertas ilmiah tersebut."
@@ -1554,8 +1564,8 @@ label scene4_kantin_siang:
     scene bg kantin
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play music audio.mysterysound4 volume 0.5 fadein 1.0
+    play sound audio.schoolchatter1 volume 3.0 fadeout 1.0
     n "Jam istirahat tiba. Kantin ramai dipenuhi lautan siswa yang sedang mengantri makanan."
     
     show carissa normal at center
@@ -1597,7 +1607,7 @@ label scene4_kantin_siang:
     c "Ga perlu khawatir Aksara, dia nggak ngapa-ngapain aku kok."
     
     show aksara serius
-    play sound audio.menghela volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Aku nggak yakin kamu bilang gitu."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Feeling-ku bilang kalo dia berbahaya buat kamu. Kemarin aku sudah bilang kan kalo jangan deket-deket si Dewa itu."
@@ -1626,7 +1636,7 @@ label scene4_kantin_siang:
     a "(dingin) Aku cuma mau melindungi temanku."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(senyum tipis) Melindungi? Dari apa?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Atau... dari siapa?"
@@ -1657,7 +1667,7 @@ label defend_aksara_scene4:
     c "Dia udah ngebantu aku dari dulu."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     n "Dewa terdiam. Ada kilatan kecewa di matanya."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "(pelan) Oke... kalau itu maumu."
@@ -1667,13 +1677,13 @@ label defend_aksara_scene4:
     
     show aksara normal at center
     with move
-    play sound audio.breathhus volume 1.0 fadeout 2.0
+    play sound audio.breathhus volume 3.0 fadeout 2.0
     a "(menghela napas lega) Makasih, Carissa."
 
     scene bg koridor_sekolah 
     with dissolve
     show dewa misterius at center with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(menatap dari jauh) ...Menarik."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Semakin kau melindunginya... semakin besar kekuatannya nanti."
@@ -1718,7 +1728,7 @@ label neutral_scene4:
     c "Kalian berdua kenapa sih?! Please, jangan kayak gini..."
     
     show aksara normal
-    play sound audio.menghela volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Baiklah..."
     
     show dewa normal
@@ -1732,7 +1742,7 @@ label neutral_scene4:
 label after_kantin_choice:
     scene black
     with Dissolve(1.0)
-    play sound audio.jampel volume 1.0 fadeout 1.0 #bell
+    play sound audio.jampel volume 3.0 fadeout 1.0 #bell
     n "Bel masuk berbunyi. Ketegangan perlahan mulai mereda."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun Carissa tahu... ini baru permulaan."
@@ -1744,7 +1754,7 @@ label scene5_perpustakaan_sore:
     scene bg perpustakaan
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterysound2 volume 0.5 fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Sepulang sekolah, Carissa memutuskan mencari informasi di perpustakaan tua dekat rumahnya."
     
@@ -1887,7 +1897,7 @@ label honest_aksara:
     c "Mimpi buruk terus, bayangan-bayangan yang ngikutin... aku takut."
     
     show aksara khawatir
-    play sound audio.menghela volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas, duduk di sebelah Carissa) Makasih udah jujur."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Aku paham perasaan kamu. Tapi... ini berbahaya, Carissa."
@@ -1996,7 +2006,7 @@ label scene6_hari_libur:
     scene bg kamar_carissa
     with dissolve
     
-    play music audio.mystery_theme fadein 3.0
+    play music audio.mysterysound4 fadein 3.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Pagi yang tenang. Carissa terbangun dengan perasaan lega—hari ini libur."
     
@@ -2025,8 +2035,7 @@ label scene6_hari_libur:
     hide kalung_glow
     with dissolve
     
-    play sound audio.door_open
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.dooropen1 volume 3.0
     nenek "(dari luar) Carissa, sarapan!"
     
     scene bg ruang_tamu_terang
@@ -2061,7 +2070,7 @@ label scene6_hari_libur:
     show nenek normal
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Nenek terdiam. Tangannya yang memegang cangkir sedikit bergetar."
-    play sound audio.menghela volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     nenek "(menghela napas) Iya..."
     
     show carissa sedih
@@ -2072,7 +2081,7 @@ label scene6_hari_libur:
     
     show nenek khawatir
     with vpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.kagetperpus volume 1.0 fadeout 1.0
     nenek "(terkejut) Carissa..."
     
     menu:
@@ -2087,7 +2096,7 @@ label ask_parents:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Kenapa Ibu juga bisa liat, Nek?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Itu sudah menjadi warisan nenek moyang kita, Nduk."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -2098,7 +2107,7 @@ label ask_parents:
     c "Berbeda gimana?"
     
     show nenek normal
-    play sound audio.ngaduk volume 1.0 fadeout 1.0
+    play sound audio.ngaduk volume 3.0 fadeout 1.0
     nenek "(mengaduk tehnya pelan) Nenek, Ibu, sama kamu... kita semua itu bisa melihat 'mereka'."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Hanya saja... Ibumu dulu cepat mempelajari apa yang dilatih."
@@ -2117,7 +2126,7 @@ label ask_parents:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(pelan) Terus kenapa... aku nggak diajarin juga?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Nenek terdiam lama. Matanya berkaca-kaca."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -2185,7 +2194,7 @@ label ask_necklace:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Bayi? Jadi... aku udah punya ini dari dulu?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "(mengangguk) Itu pemberian terakhir Ibumu sebelum dia..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -2226,7 +2235,7 @@ label scene7_siang:
     with dissolve
     
     stop music fadeout 2.0
-    play music audio.mystery_theme fadein 2.0 volume 0.5
+    play music audio.mysterysound1 volume 0.5 fadein 0.5
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Siang itu, matahari bersinar cerah."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -2234,7 +2243,7 @@ label scene7_siang:
     
     show carissa normal at center
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gasp volume 1.0 fadeout 1.0
     c "(menguap) Bingung mau ngapain..."
     
     play sound audio.door_open
@@ -2528,15 +2537,15 @@ label cooking_correct5:
     scene bg halaman_sekolah
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysteryfum loop volume 1.0 fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Pagi yang cerah di sekolah."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.larii2 loop volume 2.0 fadeout 1.0
     n "Siswa berlalu-lalang di koridor dengan riuh."
     
     show carissa normal at right
     with easeinright
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound footstepperpus loop volume 3.0 fadeout 1.0
     n "Carissa berjalan menuju kelasnya sambil bermain ponsel."
     
     play sound audio.footsteps
@@ -2551,7 +2560,7 @@ label cooking_correct5:
     c "(berseru) Aksaraa!"
     
     show aksara senyum
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menoleh volume 1.0 fadeout 1.0
     a "(menoleh) Hai, Carissa!"
     
     show carissa normal at center
@@ -2560,7 +2569,7 @@ label cooking_correct5:
     c "(melihat buku-buku) Wah, banyak banget. Kamu habis kemana?"
     
     show aksara normal
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.ambilbuku volume 3.0
     a "(mengangkat buku) Ini habis ke perpus, buat ngembaliin buku."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Udah telat seminggu, takut kena denda."
@@ -2581,7 +2590,7 @@ label cooking_correct5:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Hah? Bukannya bulan depan ya?"
     
-    show aksara bingung
+    show aksara kaget
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Loh, emang belum dikasih tau sama wali kelas kamu?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -2618,7 +2627,7 @@ label cooking_correct5:
     c "(menatap Aksara) Kamu kayaknya pernah ke sana kan?"
     
     show aksara serius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Iya... Cuma sekali aja sih."
     
     show aksara normal
@@ -2700,7 +2709,7 @@ label scene8_outing_class:
     c "Lumayan sih, aku belum pernah ke sana soalnya."
     
     show dewa misterius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(tersenyum aneh) Tempatnya keren loh!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Kamu bakal ngerasain sesuatu yang berbeda di sana."
@@ -2711,7 +2720,6 @@ label scene8_outing_class:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Hmm... Yahh, bisa dibilang gitu."
     
-    play sound audio.bus_stop
     play sound audio.keyyi volume 1.0 fadeout 1.0
     guru "(dari depan bus) Anak-anak, kita sudah sampai!"
     
@@ -2719,7 +2727,7 @@ label scene8_outing_class:
     with slow_dissolve
     
     stop sound fadeout 2.0
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.busstop volume 2.0 fadeout 1.0
     n "Bus berhenti di depan gerbang besar Candi Reksana Sewu."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Bangunan kuno menjulang tinggi dengan ukiran-ukiran yang rumit."
@@ -2746,7 +2754,7 @@ label scene8_outing_class:
 
     show dewa misterius at right
     with easeinright
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(tersenyum sambil menatap kalung Carissa) Warnanya cantik... seperti bulan di malam kelahiranmu."
     
     show aksara serius
@@ -2766,7 +2774,7 @@ label scene8_outing_class:
     a "(serius) Emang, kan aku dah bilang. Pokoknya jangan tinggalin aku ya. Apapun yang terjadi."
     
     show carissa takut
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gulp volume 3.0 fadeout 1.0
     c "(menelan ludah) K-kamu bikin aku takut..."
 
     hide aksara serius 
@@ -2804,8 +2812,8 @@ label scene8_outing_class:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     siswa1 "Guys, kalian ngerasa dingin nggak sih?"
     
-    play sound audio.wind
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+
+    play sound audio.wind4 loop volume 3.0 fadeout 1.0
     n "Angin tiba-tiba berhembus kencang dari dalam candi."
     
     show npc generic
@@ -2832,7 +2840,7 @@ label scene8_outing_class:
     n "Di sisi lain, Carissa mendengar samar-samar bisikan dari pantulan dinding-dinding."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Suara itu berbeda dari keributan siswa lainnya."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     suara "(bergema dari kedalaman candi) Carissaaaa..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     suara "Akhirnya... kau datang..."
@@ -2843,7 +2851,7 @@ label scene8_outing_class:
     
     show aksara serius at left
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.nengok volume 3.0 fadeout 1.0
     a "(menoleh cepat) Kamu dengar sesuatu?"
     
     show carissa sedih
@@ -2873,9 +2881,9 @@ label scene8_outing_class:
 
     show npc generic at right behind aksara
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gempa volume 3.0 fadeout 1.0
     siswa1 "(panik) GEMPA!"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.larii2 loop volume 4.0 fadeout 1.0
     siswa2 "KELUAR! KITA HARUS KELUAR!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     p "(berteriak) TENANG! JANGAN PANIK! IKUT AKU!"
@@ -2883,7 +2891,7 @@ label scene8_outing_class:
     hide jimat_glow
     hide kalung_glow
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.larii2 volume 3.0 fadeout 1.0
     n "Semua siswa berlarian menuju pintu keluar."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun Carissa terpaku di tempat, menatap lorong dalam candi."
@@ -2947,13 +2955,13 @@ label listen_aksara_ending:
     
     show hantu weak at center
     with flash_red
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.scream volume 1.0 fadeout 1.0
     suara "(menjerit) JANGAN PERGI!"
     
     show carissa kaget at right
     show aksara serius at left
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menoleh volume 3.0 fadeout 1.0
     c "(menoleh) A-apa itu?!"
     
     show aksara serius
@@ -2987,7 +2995,7 @@ label listen_aksara_ending:
     show carissa sedih at right
     show aksara khawatir at left
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.breathcapek volume 3.0 fadeout 1.0
     c "(terengah-engah) Hah... hah... Itu tadi... apa?"
     
     show aksara normal
@@ -3014,7 +3022,7 @@ label listen_aksara_ending:
     
     show dewa misterius at center behind aksara
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
     d "(dalam hati) Hmm... menarik."
 
     hide aksara normal
@@ -3040,7 +3048,7 @@ label follow_voice_ending:
     
     hide carissa bingung
     with easeoutright
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.runn volume 3.0 fadeout 4.0
     n "Carissa berlari ke dalam kegelapan candi."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Mengikuti suara yang terus memanggilnya."
@@ -3049,20 +3057,20 @@ label follow_voice_ending:
     
     show aksara sedih at center
     with move
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.panic volume 1.0 fadeout 1.0
     a "(berteriak) CARISSA!"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.runn volume 2.0 fadeout 1.0
     n "Aksara mencoba mengejar, tapi..."
     
     with hpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.batu volume 3.0 fadeout 1.0
     n "Pintu batu besar jatuh, memblokir jalannya."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.mukul loop volume 4.0 fadeout 1.0
     a "(memukul pintu) CARISSA! JAWAB AKU!"
     
     scene black
     with Dissolve(1.0)
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x loop volume 3.0 fadeout 1.0
     n "Di dalam kegelapan, Carissa terus berjalan."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Suara itu semakin jelas."
@@ -3092,7 +3100,7 @@ label follow_voice_ending:
     n "Aura merah gelap menyelimuti Dewa."
     
     show carissa takut
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x volume 3.0 fadeout 1.0
     c "(mundur) A-aku... aku harus balik!"
     
     show dewa wujud_asli
@@ -3120,12 +3128,12 @@ label follow_voice_ending:
     
     show aksara sedih at center
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.nangis volume 1.0 fadeout 1.0
     a "(menangis) Carissa... Kenapa kamu nggak dengerin aku..."
     
     scene black
     with Dissolve(2.0)
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.batugeser volume 1.0 fadeout 1.0
     n "Ketika pintu akhirnya terbuka, Aksara menemukan Carissa terbaring tidak sadarkan diri."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Sedangkan Dewa sudah menghilang dalam kegelapan."
@@ -3152,13 +3160,13 @@ label stay_neutral_ending:
     a "Tarik napas... dan ikuti aku perlahan."
     
     show carissa normal
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menarik volume 3.0
     c "(menarik napas) H-huh... O-oke..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x loop volume 3.0 fadeout 1.0
     n "Perlahan, mereka berjalan mundur menuju pintu keluar."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Suara itu masih terus memanggil, tapi Carissa berusaha mengabaikannya."
-    
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     suara "(semakin lemah) Carissa... jangan pergi..."
     
     show carissa takut
@@ -3169,8 +3177,7 @@ label stay_neutral_ending:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Hampir sampai... terus bergerak!"
     
-    play sound audio.running
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.runn volume 2.0
     n "Mereka berdua akhirnya sampai di pintu keluar."
     
     scene bg candi_gerbang
@@ -3195,7 +3202,7 @@ label stay_neutral_ending:
     c "Apa sebenarnya yang terjadi sama aku?"
     
     show aksara khawatir
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Aku juga belum yakin sepenuhnya."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Tapi satu hal yang pasti... kamu istimewa, Carissa."
@@ -3245,10 +3252,10 @@ label good_ending_chapter2:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Kalau nggak ada kamu... aku nggak tau bakal gimana."
     
-    play sound audio.phone_vibrate
+    play sound audio.phonevibrate
 
     show carissa bingung
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.phonevibrate volume 2.0 fadeout 1.0
     c "(lihat HP) ...?"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Ada pesan dari nomor tidak dikenal."
@@ -3310,7 +3317,7 @@ label bad_ending_chapter2:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Aksara? Di mana dia?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Dia langsung pergi setelah nganterin kamu."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -3320,7 +3327,7 @@ label bad_ending_chapter2:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(dalam hati) Aksara... maafin aku..."
     
-    hide nenek sedih
+    hide nenek khawatir
     with dissolve
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa mengambil ponselnya, mencoba menghubungi Aksara."
@@ -3335,7 +3342,8 @@ label bad_ending_chapter2:
     
     show dewa misterius at right
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.tensionh volume 2.0 fadeout 1.0
+    play sound audio.bisikan volume 5.0
     d "(berbisik) Baru sekarang menyesal?"
     
     hide dewa misterius
@@ -3375,7 +3383,7 @@ label neutral_ending_chapter2:
     scene bg halaman_sekolah
     with slow_dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterysound3 fadein 2.0 
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Perjalanan pulang terasa sunyi."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -3394,7 +3402,7 @@ label neutral_ending_chapter2:
     show aksara normal
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Syukurlah..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Tapi aku khawatir ini cuma baru permulaannya aja."
     
     show carissa bingung
@@ -3484,7 +3492,7 @@ label chapter3_scene1_good_start:
     scene bg kamar_carissa
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterykripy loop fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Pagi itu, Carissa bangun dengan perasaan lebih tenang."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -3536,8 +3544,7 @@ label chapter3_scene1_bad_start:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(gemetar) Jangan-jangan..."
     
-    play sound audio.wind
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 2.0 fadeout 1.0
     suara "(berbisik lembut) Carissa..."
     
     show carissa kaget
@@ -3610,7 +3617,7 @@ label chapter3_scene1_neutral_start:
 
     show carissa normal
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     c "(menghela napas) Mungkin... aku harus cari tau sendiri dulu."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Ia melirik ke arah atas lemarinya, disana terdapat kotak kayu berdebu."
@@ -3639,8 +3646,8 @@ label chapter3_scene2:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa berjinjit saat hendak mengambil kotak. Ia pun akhirnya berhasil menurunkannya dari lemari."
 
-    play sound audio.thing_open
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    
+    play sound audio.bukakotak volume 3.0 fadeout 1.0
     n "Kotak terbuka dengan bunyi derit pelan."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Debu beterbangan di udara."
@@ -3677,23 +3684,29 @@ label chapter3_scene2:
     hide carissa sedih
     with dissolve
 
-    play sound audio.book_flip
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bookopen volume 3.0 
     n "Carissa membuka buku catatan dengan tangan gemetar."
-    
+    stop sound
+
+    play sound audio.bookflip1 volume 1.0
     centered "{i}'16 Tahun yang lalu...'{/i}"
+    stop sound
     pause 1.0
+    play sound audio.bookflip1 volume 1.0
     centered "{i}'Hari ini aku melahirkan Carissa.'{/i}"
     pause 1.0
+    play sound audio.bookflip1 volume 3.0
     centered "{i}'Tepat saat gerhana bulan.'{/i}"
     pause 1.0
     
-    play sound audio.book_flip
+    play sound audio.bookflip1 volume 3.0
     
     centered "{i}'Para tetua Nirantara bilang... Carissa adalah Pembawa Darah Rakta.'{/i}"
     pause 1.0
+    play sound audio.bookflip1 volume 3.0
     centered "{i}'Aku takut. Sangat takut.'{/i}"
     pause 1.0
+    play sound audio.bookflip1 volume 3.0
     centered "{i}'Tapi aku akan lindungi dia. Apapun yang terjadi.'{/i}"
     pause 1.5
     
@@ -3703,12 +3716,14 @@ label chapter3_scene2:
     c "(menangis) Jadi... aku..."
     
 
-    play sound audio.book_flip
-    
+    play sound audio.bookflip1 volume 3.0
+
     centered "{i}'2 tahun kemudian...'{/i}"
     pause 1.0
+    play sound audio.bookflip1 volume 3.0
     centered "{i}'Dewa Abinaya mulai bergerak.'{/i}"
     pause 1.0
+    play sound audio.bookflip1 volume 3.0
     centered "{i}'Dia tau tentang Carissa. Dia akan datang.'{/i}"
     pause 1.5
     
@@ -3723,8 +3738,7 @@ label chapter3_scene2:
     show kalung_glow at center
     with flash_red
     
-    play sound audio.heartbeat
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.heartbeat3 volume 2.0
     n "Kalung di leher Carissa tiba-tiba menyala merah terang!"
     
     show carissa takut
@@ -3739,14 +3753,14 @@ label chapter3_scene2:
     with flash_white
     
 
-    play music audio.tension fadein 2.0
+    play music audio.tensionmusic loop volume 2.0 fadein 2.0
     
     centered "{color=#8b0000}Pecahan Memori{/color}"
     pause 1.0
     
     scene bg candi_gerbang
     with nightmare_transition
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.transisi volume 3.0 
     n "Carissa menemukan dirinya berdiri di depan gerbang besar."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Tapi ini bukan dirinya. Dia... melihat dari mata orang lain."
@@ -3782,7 +3796,7 @@ label chapter3_scene2:
     n "Ibunya berbisik mantra yang Carissa tidak pahami."
     
     show dewa marah
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.mandewa volume 2.0 fadeout 1.0
     d "(menjerit) KAU PIKIR KAU BISA TAHAN AKU?!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "ANAKMU! ANAKMU ADALAH DARAH RAKTA!"
@@ -3828,13 +3842,13 @@ label chapter3_scene2:
     with vpunch
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(terbangun) HAH!"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.huh volume 2.0 fadeout 1.0
     n "Carissa terengah-engah, keringat dingin membasahi dahinya."
     
     show carissa sedih
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(gemetar) Itu... itu memori Ibu?"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.kagetperpus volume 3.0 fadeout 1.0
     c "(terkejut) Jadi murid baru... Dewa yang sama?!"
     
 
@@ -3864,8 +3878,7 @@ label chapter3_scene2:
 
 
 label call_aksara:
-    play sound audio.phone_vibrate
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.phonevibrate volume 3.0
     n "Carissa menghubungi Aksara dengan tangan gemetar."
 
     if aksara_points > dewa_points + 3:
@@ -3891,7 +3904,7 @@ label call_aksara:
         c "Tapi aku... aku perlu bantuan kamu."
         play sound audio.keyyi volume 1.0 fadeout 1.0
         n "Hening sejenak."
-        play sound audio.keyyi volume 1.0 fadeout 1.0
+        play sound audio.menghela volume 2.0 fadeout 1.0
         a "(menghela napas) ...Oke. Aku ke sana."
         
     else:
@@ -3914,11 +3927,10 @@ label call_aksara:
 
 label investigate_more:
     show carissa bingung
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bookopen volume 3.0 fadeout 1.0
     c "(membuka lagi buku catatan) Mungkin ada info lain..."
     
-    play sound audio.book_flip
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bookflip1 loop volume 2.0 
     n "Carissa membolak-balik halaman dengan cepat."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Sampai ia menemukan halaman yang berbeda—ditulis dengan tinta merah."
@@ -3971,7 +3983,7 @@ label confront_dewa:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(dalam hati) Aku harus dapet jawaban sekarang!"
     
-    play sound audio.door_open
+    play sound audio.dooropen1 volume 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Namun, tepat Carissa melangkah keluar..."
 
@@ -3981,8 +3993,8 @@ label confront_dewa:
     nenek "Carissa?! Mau kemana jam segini?"
     
     show carissa kaget at right
-    with move
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    with move 
+    play sound audio.kagetperpus volume 3.0
     c "Nek, aku—"
     
     show nenek serius
@@ -3995,7 +4007,7 @@ label confront_dewa:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Kalo aku... Darah Rakta."
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Carissa..."
     
@@ -4016,8 +4028,8 @@ label call_nenek_path:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Nek... aku nemu catatan Ibu."
     
-    show nenek sedih
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    show nenek khawatir
+    play sound audio.menghela volume 3.0 fadeout 1.0
     nenek "(menghela napas panjang) Akhirnya... hari ini juga tiba."
     
     show carissa bingung
@@ -4057,7 +4069,7 @@ label nenek_explains:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Nolak?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Dia bilang: 'Carissa itu bukan alat, Mbok. Dia punya hak untuk hidup normal.'"
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -4127,8 +4139,7 @@ label nenek_explains:
     jump call_aksara_path
 
 label call_aksara_path:
-    play sound audio.phone_vibrate
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.phonevibrate loop volume 3.0 fadeout 1.0
     n "Carissa menghubungi Aksara dengan tangan gemetar."
 
     if aksara_points > dewa_points + 3:
@@ -4206,7 +4217,7 @@ label aksara_arrives:
         
         show aksara kaget
         with vpunch
-        play sound audio.keyyi volume 1.0 fadeout 1.0
+        play sound audio.kagetperpus volume 3.0 fadeout 1.0
         a "Kamu... gimana bisa—"
         
         show carissa serius
@@ -4260,7 +4271,7 @@ label scene3_without_nenek_knowledge:
         c "(menyerahkan buku catatan) Ini... catatan Ibu."
         
         show aksara khawatir
-        play sound audio.keyyi volume 1.0 fadeout 1.0
+        play sound audio.bookopen volume 3.0
         a "(membuka buku, membaca)"
         play sound audio.keyyi volume 1.0 fadeout 1.0
         n "Aksara membaca dalam diam. Ekspresinya berubah."
@@ -4774,7 +4785,7 @@ label scene3_common_part:
         
         c "Nek! Dari tadi dengerin?"
         
-        show nenek sedih
+        show nenek khawatir
         
         nenek "(mengangguk) Iya, Nduk."
         nenek "Nenek harus tambahin sesuatu."
@@ -4824,13 +4835,13 @@ label scene3_common_part:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Nenek...?"
     
-    show nenek sedih
+    show nenek khawatir
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "(menggeleng) Nggak apa-apa, Nduk."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     nenek "Nenek cuma... bangga sama kamu."
 
-    hide nenek sedih
+    hide nenek khawatir
     hide carissa normal
     hide aksara senyum
     with dissolve
@@ -4928,7 +4939,7 @@ label scene4_bad_relationship:
     n "Keadaan hening di sekitar membuat keduanya tampak canggung."
     
     show aksara serius
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     a "(menghela napas) Oke. Kita mulai aja."
     
     show carissa normal
@@ -4952,7 +4963,7 @@ label scene4_neutral_relationship:
     scene bg candi_gerbang
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterysound2 fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa dan Aksara bertemu di kuil seperti yang dijanjikan."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -5398,7 +5409,7 @@ label scene4_rest_bad:
     c "(menunduk) Aku tau kamu masih... marah."
     
     show aksara sedih
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 2.0 fadeout 1.0
     a "(menghela napas) Aku nggak marah."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "(menatap Carissa) Aku cuma... kecewa."
@@ -5465,7 +5476,7 @@ label scene4_rest_neutral:
     a "Apa kamu udah bisa nerima dikit-dikit?"
     
     show carissa sedih
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     c "(menghela napas) Yah, gimanapun juga aku harus ngelakuin ini kan?"
     
     show aksara normal
@@ -5490,7 +5501,7 @@ label scene4_shadow:
     scene bg cafe
     with dissolve
     
-    play music audio.tension fadein 2.0
+    play music audio.tensionmusic fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Dalam perjalanan pulang, Carissa mampir sebentar ke salah satu kafe yang ada di pinggir jalan."
     play sound audio.keyyi volume 1.0 fadeout 1.0
@@ -5532,9 +5543,9 @@ label scene4_shadow:
     
     show carissa takut at right
     with move
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x volume 1.0 fadeout 1.0
     c "(mundur) S-siapa?!"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     suara "(bergema) Carissa..."
     
     show carissa kaget
@@ -5542,7 +5553,7 @@ label scene4_shadow:
     c "K-kenapa kamu tau namaku?!"
     
     show bayangan
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "Pesan... dari Tuan Dewa..."
     
     show carissa bingung
@@ -5565,9 +5576,9 @@ label scene4_shadow:
     c "Kalau aku nggak datang?!"
     
     show bayangan
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.whisperr volume 1.0 fadeout 1.0
     suara "(menyeringai) Maka... orang-orang terkasihmu..."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.scream volume 1.0 fadeout 1.0
     suara "Akan menjadi... korban pertama..."
     
     show carissa marah
@@ -5587,7 +5598,7 @@ label scene4_shadow:
     
     show carissa takut at center
     with move
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.breathcapek volume 3.0 fadeout 1.0
     c "(terengah-engah) Hah... hah..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(gemetar) Tiga hari... aku harus... gimana?"
@@ -5644,8 +5655,8 @@ label scene5_told_aksara:
     scene bg ruang_tamu_terang
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play music audio.mysterysound4 volume 0.5 fadeout 2.0
+    play sound audio.phonevibrate volume 3.0 fadeout 1.0
     n "Carissa langsung menghubungi Aksara dan memintanya datang."
     
     show aksara khawatir at left
@@ -5717,22 +5728,22 @@ label scene5_keep_secret:
     c "(menatap kalung) Tapi... apa aku kuat sendirian?"
     
     play sound audio.wind
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 2.0 fadeout 1.0
     suara "(berbisik lembut) Kamu... cukup kuat..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     suara "Percaya... pada dirimu sendiri..."
     
     show carissa takut
     with hpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.nengok volume 1.0 fadeout 1.0
     c "(menoleh cepat) ?!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Tidak ada siapa-siapa di dalam kamarnya."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.wind2 volume 3.0 fadeout 1.0
     n "Hanya angin malam yang berhembus pelan lewat jendelanya."
     
     show carissa sedih
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     c "(menghela napas) Aku... harus mikir jernih."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Tiga hari. Aku punya waktu tiga hari."
@@ -5744,7 +5755,7 @@ label scene5_tell_nenek:
     scene bg ruang_tamu_terang
     with dissolve
     
-    play music audio.mystery_theme fadein 2.0
+    play music audio.mysterysound3 volume 0.5 fadein 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa memutuskan untuk bercerita pada Nenek terlebih dulu."
     
@@ -5756,8 +5767,8 @@ label scene5_tell_nenek:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(menceritakan kejadian)"
     
-    show nenek sedih
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    show nenek khawatir
+    play sound audio.breathhus volume 3.0 fadeout 1.0
     nenek "(menghela napas berat) Akhirnya... waktunya tiba."
     
     show carissa bingung
@@ -5814,7 +5825,7 @@ label scene5_tell_nenek:
             c "Maaf, Nek... tapi aku harus lindungi Aksara."
             c "Ini tanggung jawabku."
             
-            show nenek sedih
+            show nenek khawatir
             
             nenek "(menggeleng sedih) Carissa..."
             
@@ -5823,7 +5834,7 @@ label scene5_tell_nenek:
 label scene5_aksara_from_nenek:
     scene black
     with Dissolve(0.5)
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.phonevibrate volume 1.0 fadeout 1.0
     n "Carissa menghubungi Aksara dan menceritakan semuanya."
     
     scene bg ruang_tamu_terang
@@ -6009,7 +6020,7 @@ label chapter3_scene6:
     scene black
     with Dissolve(2.0)
     
-    play music audio.tension fadein 3.0
+    play music audio.tensionmusic volume 0.5 fadein 3.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     centered "{color=#fff}Candi Reksana Sewu{/color}"
     pause 1.0
@@ -6020,8 +6031,7 @@ label chapter3_scene6:
     scene bg candi_gerbang
     with dissolve
     
-    play sound audio.wind
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.wind21 volume 3.0 fadeout 1.0
     n "Langit berwarna jingga kemerahan, pertanda matahari akan segera tenggelam."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Carissa berdiri di depan gerbang candi yang megah."
@@ -6083,12 +6093,12 @@ label scene6_alone:
         
         show carissa kaget
         with vpunch
-        
+        play sound audio.noleh volume 3.0 
         c "(menoleh cepat) Siapa?!"
         
         show aksara serius at left
         with easeinleft
-        
+        play sound audio.breathcapek volume 3.0 
         a "(terengah-engah) Kamu pikir... aku bakal biarin kamu sendirian?"
         
         show carissa takut at right
@@ -6106,7 +6116,7 @@ label scene6_alone:
         c "(menunduk) Maafin aku... aku cuma—"
         
         show aksara normal
-        
+        play sound audio.menghela volume 3.0 
         a "(menghela napas) Sudahlah. Yang penting kita harus hadapi bersama."
         
         $ aksara_points += 1
@@ -6135,16 +6145,15 @@ label scene6_alone:
 label scene6_dewa_appears:
     play sound audio.wind
     with hpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.wind4 volume 3.0 fadeout 1.0
     n "Angin tiba-tiba bertiup kencang."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.windrumput volume 3.0 fadeout 1.0
     n "Debu dan dedaunan beterbangan."
     
     show carissa takut
     show aksara serius
     
-    play music audio.heartbeat fadein 2.0
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.heartbeat1 volume 3.0 fadeout 1.0
     n "Salah satu candi batu di depan mereka mulai bergetar hebat."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Retakan-retakan bercahaya merah muncul di permukaannya."
@@ -6158,8 +6167,7 @@ label scene6_dewa_appears:
     with flash_red
     
     
-    play sound audio.magic
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.transform volume 3.0 fadeout 1.0
     n "Sosok tinggi besar muncul dari balik gerbang."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Aura merah gelap menyelimutinya."
@@ -6168,7 +6176,7 @@ label scene6_dewa_appears:
 
     show dewa wujud_asli at center 
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     d "(suara bergema) Carissa... akhirnya kau datang."
     
     show aksara guardian at left
@@ -6195,7 +6203,7 @@ label scene6_dewa_appears:
     d "Kalau tidak mau, maka... yah aku terpaksa sih harus mengambilnya secara paksa."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Senang udah mengenalmu, Carissa."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.mandewa volume 2.0 fadeout 1.0
     a "(berteriak) CUKUP OMONG KOSONGMU!"
     
     play sound audio.magic
@@ -6204,7 +6212,7 @@ label scene6_dewa_appears:
     with flash_blue
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Aksara meluncurkan serangan energi biru ke arah Dewa!"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.block volume 3.0 fadeout 1.0
     d "(menangkis dengan mudah)"
     
     play sound audio.wind
@@ -6231,7 +6239,7 @@ label scene6_dewa_appears:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Aku nggak akan membiarkanmu... sentuh dia!"
     
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.menghela volume 3.0 fadeout 1.0
     d "(menghela napas) Kesetiaan yang bodoh."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "(mengangkat tangan)"
@@ -6248,14 +6256,13 @@ label scene6_dewa_appears:
     
     show carissa normal at center
     with move
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.runn volume 3.0 fadeout 1.0
     n "Carissa berlari ke depan Aksara, membentangkan tangannya."
     
     show kalung_glow at center
     with flash_blue
     
-    play sound audio.magic
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.transformibu volume 3.0 fadeout 1.0
     n "Kalung ibunya bersinar terang!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Pelindung biru muncul dan menahan serangan Dewa."
@@ -6373,7 +6380,7 @@ label scene6_three:
     d "Aku beri kamu tiga pilihan, Carissa."
     
     show carissa takut
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.gulp volume 3.0 fadeout 1.0
     c "(menelan ludah)"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "PERTAMA: Buka gerbang dengan darah Raktamu."
@@ -6427,7 +6434,7 @@ label scene6_three:
     n "Hanya suara angin yang berhembus pelan."
     
     show carissa normal
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.breathhus volume 3.0 fadeout 1.0
     c "(napas berat) Aku... aku butuh waktu buat mikir."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     d "Sayangnya, waktu adalah kemewahan yang tidak kita miliki."
@@ -6483,7 +6490,7 @@ label scene6_three:
     pause 1.5
     
     show carissa normal
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.transisi volume 3.0
     c "(membuka mata) Aku... sudah tau jawabannya."
     
     jump scene6_final_choice
@@ -6605,18 +6612,18 @@ label ending_good:
     with dissolve
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Aksara melompat ke depan Carissa dan membentuk perisai biru."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.block volume 1.0 fadeout 1.0
     a "(menahan serangan) UGHHH!"
     
     with hpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.elemen volume 3.0 fadeout 1.0
     n "Benturan kedua energi pun mengguncang di sekitar candi."
     
 
     show aksara guardian at left
     with move
     with hpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.pusg volume 1.0 fadeout 1.0
     a "(terpental) Akh!"
     
     show carissa kaget
@@ -6647,7 +6654,7 @@ label ending_good:
     
     show aura_biru at right
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.crem volume 1.0 fadeout 1.0
     c "(berteriak) INI UNTUK IBU!"
     
     play sound audio.magic
@@ -6655,7 +6662,7 @@ label ending_good:
     
     show dewa wujud_asli at center
     with flash_red
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.block volume 3.0 fadeout 1.0
     d "(menangkis) HAHAHA! LEMAH!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Serangan Carissa sukses membuat Dewa sedikit mundur dari tempatnya."
@@ -6676,7 +6683,7 @@ label ending_good:
     show kalung_glow at right
     with dissolve
     
-    play sound audio.heartbeat
+    play sound audio.heartbeat5 volume 2.0 
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Cahaya biru semakin terang!"
     
@@ -6697,7 +6704,7 @@ label ending_good:
     
     with hpunch
     with vpunch
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.boom2 volume 3.0
     n "Ledakan dahsyat benar-benar mengguncangkan seluruh wilayah candi."
     
     scene white
@@ -6715,7 +6722,7 @@ label ending_good:
     n "Asap perlahan menghilang."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Dewa berlutut, aura merahnya melemah."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.breathhus volume 2.0 fadeout 1.0
     d "(napas berat) Kalian... kuat."
     
     show aksara guardian at left
@@ -6723,7 +6730,7 @@ label ending_good:
     with dissolve
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Aksara dan Carissa masih berdiri meski lelah."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.breathcapek volume 2.0 fadeout 1.0
     a "(terengah) Sekarang, Carissa!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Tutup gerbangnya sebelum dia pulih!"
@@ -7056,7 +7063,7 @@ label ending_bad:
     c "(monolog) Pertama kali aku datang ke sini... aku merasa aneh."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "Seperti ada yang memanggilku bilang... 'Aku mengerti kamu.'"
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.bisikan volume 3.0 fadeout 1.0
     d "(suara bisikan) Tenang... aku di sini..."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(berbaring di tempat tidur) Siapa...?"
@@ -7224,7 +7231,7 @@ label ending_neutral:
     c "BUKAN! Aku bukan lemah!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     c "(menatap Aksara) Aku hanya... tidak mau ada yang terluka lagi."
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1x volume 3.0 fadeout 1.0
     a "(melangkah maju) Carissa, kamu tidak perlu menanggung ini sendirian."
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "Ada cara lain."
@@ -7266,7 +7273,7 @@ label ending_neutral:
     show dewa wujud_asli at center
     with vpunch
     
-    play sound "sfx_dark_power.ogg"
+    play sound audio.darkpower volume 2.0 fadeout 2.0
     play sound audio.keyyi volume 1.0 fadeout 1.0
     n "Energi gelap meledak dari tubuh Dewa, membuat tanah berguncang."
     
@@ -7285,7 +7292,7 @@ label ending_neutral:
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "(dengan tenang) Ini adalah pengorbananku."
     
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.footstep1xx loop volume 3.0 fadeout 1.0
     n "Aksara berjalan mendekati gerbang, sementara rantai cahaya terus mengikat Dewa."
     
     show aksara guardian at center
@@ -7293,7 +7300,7 @@ label ending_neutral:
     
     show carissa sedih at left
     with dissolve
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.runn loop volume 3.0 fadeout 1.0
     c "(berlari) AKSARA, JANGAN!"
     play sound audio.keyyi volume 1.0 fadeout 1.0
     a "(berbalik, tersenyum) Carissa... kamu kuat. Lebih kuat dari yang kamu kira."
@@ -7320,7 +7327,7 @@ label ending_neutral:
     
     scene bg white
     with flash
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.light volume 3.0 fadeout 1.0
     n "Cahaya menyilaukan memenuhi sekitar candi."
     
     show carissa sedih at center
@@ -7338,7 +7345,7 @@ label ending_neutral:
     
     scene bg ruang_tamu_terang
     with fade
-    play sound audio.keyyi volume 1.0 fadeout 1.0
+    play sound audio.transisi volume 3.0
     n "Beberapa hari kemudian..."
     
     show nenek normal at right
@@ -7405,3 +7412,74 @@ label ending_neutral:
     pause 2.0
  
 return   
+
+#credit scene
+# --- 4. PENGATURAN TAMPILAN CREDITS ---
+
+# A. ANIMASI GERAK (Transform)
+# Saya ubah ypos akhir menjadi -2.5 agar teks yang panjang bisa naik sampai hilang sepenuhnya
+transform credits_scroll(waktu_scroll):
+    ypos 1.1
+    linear waktu_scroll ypos -2.5
+
+# B. TAMPILAN LAYAR (Screen)
+screen rolling_credits():
+    # Memastikan screen ini ada di layer paling atas
+    zorder 100
+    
+    # Background hitam
+    add "#000"
+
+    frame:
+        background None
+        xalign 0.5
+        
+        # Terapkan animasi gerak (Durasi diperlama jadi 25.0 detik agar terbaca)
+        at credits_scroll(25.0)
+
+        vbox:
+            xalign 0.5
+            spacing 25 # Jarak antar baris sedikit diperlebar
+
+            # --- JUDUL ---
+            text "CREDITS" size 65 bold True color "#ffffff" xalign 0.5
+            null height 60 
+
+            # --- BAGIAN GUI ---
+            text "GUI & Interface Design" size 30 color "#cccccc" xalign 0.5
+            text "Revano" size 45 bold True color "#ffffff" xalign 0.5
+            null height 40
+
+            # --- BAGIAN CODING SCRIPT ---
+            text "Lead Programmer / Scripting" size 30 color "#cccccc" xalign 0.5
+            text "Khanza" size 45 bold True color "#ffffff" xalign 0.5
+            null height 40
+
+            # --- BAGIAN NASKAH & ASET ---
+            text "Story Writer & Asset Management" size 30 color "#cccccc" xalign 0.5
+            text "Naswa" size 45 bold True color "#ffffff" xalign 0.5
+            text "Syafira" size 45 bold True color "#ffffff" xalign 0.5
+            null height 40
+
+            # --- BAGIAN MINI GAME ---
+            text "Mini Game Developers and Sound" size 30 color "#cccccc" xalign 0.5
+            text "Fadly" size 45 bold True color "#ffffff" xalign 0.5
+            text "Salman" size 45 bold True color "#ffffff" xalign 0.5
+            null height 40
+
+            #--- BAGIAN SPRITE---
+            text "Ilusstator Character" size 30 color "#cccccc" xalign 0.5
+            text "Alfi" size 45 bold True color "#ffffff" xalign 0.5
+            text "Michele" size 45 bold True color "#ffffff" xalign 0.5
+            text "Khanza" size 45 bold True color "#ffffff" xalign 0.5
+            null height 60
+
+
+            # --- PENUTUP ---
+            text "Special Thanks" size 30 color "#cccccc" xalign 0.5
+            text "Alfi & Michele" size 35 bold True color "#ffffff" xalign 0.5
+            text "Our Teachers & Friends" size 35 bold True color "#ffffff" xalign 0.5
+            null height 60
+
+            text "Thanks for Playing!" size 55 bold True color "#ffff00" xalign 0.5
+            # --- AKHIR TEKS ---

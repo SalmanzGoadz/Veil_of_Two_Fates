@@ -12,7 +12,10 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Veil of Two Fates2")
+define config.name = _("Veil of Two Fates")
+
+define android_icon = "gui/android-icon.png"
+
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -30,6 +33,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+“Veil of Two Fates” adalah sebuah visual novel yang mengajak pemain memasuki dunia penuh misteri, emosi, dan pilihan yang menentukan. Setiap keputusan membawa konsekuensi, membuka cabang cerita berbeda, dan mengungkap rahasia yang tersembunyi di balik karakter serta dunia yang kamu jelajahi. Dengan visual yang memikat dan alur cerita yang mendalam, game ini mengajak pemain merasakan pengalaman naratif yang imersif dan tak terlupakan.
 """)
 
 
@@ -37,7 +41,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "VeilofTwoFates2"
+define build.name = "VeilofTwoFates"
 
 
 ## Sounds and music ############################################################

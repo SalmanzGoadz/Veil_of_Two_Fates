@@ -1,36 +1,45 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 701, in script
-    show npc generic at
-  File "game/script.rpy", line 701, in <module>
-    show npc generic at
-                       
-NameError: name 'righ' is not defined. Did you mean: 'right'?
+  File "game/script.rpy", line 1201, in script
+    play sound audio.whosperr volume 1.0 fadeout 1.0
+  File "game/script.rpy", line 1201, in <module>
+    play sound audio.whosperr volume 1.0 fadeout 1.0
+                ^^^^^^^^^^^^^^                      
+AttributeError: 'StoreModule' object has no attribute 'whosperr'. Did you mean: 'whisperr'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 701, in script
-    show npc generic at
-  File "renpy/ast.py", line 1357, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ast.py", line 726, in show_imspec
-    at_list = [renpy.python.py_eval(i) for i in at_list]
-               ~~~~~~~~~~~~~~~~~~~~^^^                  
+  File "game/script.rpy", line 1201, in script
+    play sound audio.whosperr volume 1.0 fadeout 1.0
+  File "renpy/ast.py", line 2231, in execute
+    self.call("execute")
+    ~~~~~~~~~^^^^^^^^^^^
+  File "renpy/ast.py", line 2195, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/statements.py", line 379, in call
+    return method(parsed, *args, **kwargs)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000statements.rpy", line 312, in execute_play_sound
+    _audio_eval(p["file"]),
+    ~~~~~~~~~~~^^^^^^^^^^^ 
+  File "renpy/common/000statements.rpy", line 39, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1292, in py_eval
     return py_eval_bytecode(code, globals, locals)
            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1285, in py_eval_bytecode
     return eval(bytecode, globals, locals)
            ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 701, in <module>
-    show npc generic at
-                       
-NameError: name 'righ' is not defined. Did you mean: 'right'?
+  File "game/script.rpy", line 1201, in <module>
+    play sound audio.whosperr volume 1.0 fadeout 1.0
+                ^^^^^^^^^^^^^^                      
+AttributeError: 'StoreModule' object has no attribute 'whosperr'. Did you mean: 'whisperr'?
 
-Windows-10-10.0.19045-SP0 AMD64
-Ren'Py 8.4.1.25072401
+Windows-11-10.0.26100-SP0 AMD64
+Ren'Py 8.4.0.25071206
 Veil of Two Fates2 1.0
-Tue Dec  9 12:24:37 2025
+Tue Dec  9 19:07:33 2025
